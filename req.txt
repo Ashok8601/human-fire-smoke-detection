@@ -1,0 +1,10 @@
+flask
+werkzeug
+blinker
+click
+itsdangerous
+jinja2
+markupsafe
+ultralytics
+opencv-python-headless
+numpy
