@@ -2,156 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Security Center - User Management</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Identity Matrix Registry Registry</title>
     <style>
-        body { background: #121212; color: #e0e0e0; }
-        .card { background: #1e1e1e; border: 1px solid #2d2d2d; }
-        .table { color: #e0e0e0; }
-        .table-dark { --bs-table-bg: #181818; }
-        .nav-link { color: #ff4444; }
+        :root { --bg-base: #020617; --bg-card: #0f172a; --border: #1e293b; --primary: #2563eb; --danger: #ef4444; --text: #f8fafc; --muted: #64748b; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-base); color: var(--text); padding: 30px; display: flex; justify-content: center; }
+        .panel { width: 100%; max-width: 750px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
+        h2 { margin: 0; font-size: 20px; font-weight: 800; }
+        .back-nav { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .layout-split { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+        .field { width: 100%; background: #020617; border: 1px solid var(--border); color: white; padding: 10px; border-radius: 6px; box-sizing: border-box; outline: none; }
+        .btn { border: none; padding: 10px 16px; border-radius: 6px; font-weight: 700; cursor: pointer; color: white; width: 100%; }
+        .btn-add { background: var(--primary); }
+        .user-list { list-style: none; padding: 0; margin: 0; }
+        .user-item { display: flex; justify-content: space-between; align-items: center; background: rgba(2,6,23,0.3); border: 1px solid var(--border); padding: 10px 14px; border-radius: 6px; margin-bottom: 8px; }
+        .btn-del { background: var(--danger); width: auto; font-size: 12px; padding: 5px 10px; }
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
-            <h2 class="text-danger">⚙️ User Management Controls</h2>
-            <div>
-                <a href="/" class="btn btn-outline-light btn-sm me-2">📺 Live Feed</a>
-                <a href="/logout" class="btn btn-danger btn-sm">Sign Out</a>
+<div class="panel">
+    <div class="header">
+        <h2>👥 Security Matrix Operator Management</h2>
+        <a href="/" class="back-nav">➔ Exit Control Registry</a>
+    </div>
+    
+    <div class="layout-split">
+        <div>
+            <h4 style="margin-top:0; color:var(--primary)">Register New Security Operator</h4>
+            <div class="input-group">
+                <label>Username Account</label>
+                <input type="text" id="new_user" class="field" placeholder="Operator ID">
             </div>
+            <div class="input-group">
+                <label>Security Password</label>
+                <input type="password" id="new_pass" class="field" placeholder="••••••••">
+            </div>
+            <button class="btn btn-add" onclick="provisionUser()">PROVISION ACCOUNT Identity</button>
         </div>
-
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card p-3">
-                    <h5 class="text-white mb-3">➕ Add New User</h5>
-                    <form id="addUserForm">
-                        <div class="mb-2">
-                            <label class="form-label small">Username</label>
-                            <input type="text" id="add_user" class="form-control form-control-sm bg-dark text-white border-secondary" required>
-                        </div>
-                        <div class="mb-2">
-                            <label class="form-label small">Password</label>
-                            <input type="password" id="add_pass" class="form-control form-control-sm bg-dark text-white border-secondary" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small">System Role</label>
-                            <select id="add_role" class="form-select form-select-sm bg-dark text-white border-secondary">
-                                <option value="operator">Operator (View Only)</option>
-                                <option value="admin">Admin (Full Access)</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-sm w-100">Create Account</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-md-8 mb-4">
-                <div class="card p-3">
-                    <h5 class="text-white mb-3">👥 Active User Registry</h5>
-                    <div class="table-responsive">
-                        <table class="table table-dark table-hover table-striped align-middle small">
-                            <thead>
-                                <tr>
-                                    <th>User</th>
-                                    <th>Role</th>
-                                    <th>Status Flags</th>
-                                    <th class="text-center">Operations</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for user in users %}
-                                <tr>
-                                    <td><strong>{{ user.username }}</strong></td>
-                                    <td><span class="badge bg-secondary">{{ user.role }}</span></td>
-                                    <td>
-                                        {% if user.is_blocked %}<span class="badge bg-danger">BLOCKED</span>{% endif %}
-                                        {% if user.is_flagged %}<span class="badge bg-warning text-dark">FLAGGED</span>{% endif %}
-                                        {% if not user.is_blocked and not user.is_flagged %}<span class="badge bg-success">ACTIVE</span>{% endif %}
-                                    </td>
-                                    <td class="text-center">
-                                        {% if user.is_blocked %}
-                                            <button onclick="triggerAction({{ user.id }}, 'unblock')" class="btn btn-outline-success btn-xs py-0 px-1">Unblock</button>
-                                        {% else %}
-                                            <button onclick="triggerAction({{ user.id }}, 'block')" class="btn btn-outline-warning btn-xs py-0 px-1">Block</button>
-                                        {% endif %}
-
-                                        {% if user.is_flagged %}
-                                            <button onclick="triggerAction({{ user.id }}, 'unflag')" class="btn btn-outline-info btn-xs py-0 px-1">Unflag</button>
-                                        {% else %}
-                                            <button onclick="triggerAction({{ user.id }}, 'flag')" class="btn btn-outline-primary btn-xs py-0 px-1">Flag</button>
-                                        {% endif %}
-                                        
-                                        <button onclick="triggerAction({{ user.id }}, 'delete')" class="btn btn-danger btn-xs py-0 px-1">Delete</button>
-                                    </td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="card p-3">
-                    <h5 class="text-warning mb-3">📑 System Audit Activity Logs</h5>
-                    <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
-                        <table class="table table-dark table-sm table-striped small">
-                            <thead>
-                                <tr>
-                                    <th>Timestamp</th>
-                                    <th>Executed By</th>
-                                    <th>Action Type</th>
-                                    <th>Operation Metadata Details</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for log in logs %}
-                                <tr>
-                                    <td class="text-secondary">{{ log.timestamp }}</td>
-                                    <td class="text-info">{{ log.username }}</td>
-                                    <td><span class="text-warning fw-bold">{{ log.action }}</span></td>
-                                    <td>{{ log.details }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+        
+        <div>
+            <h4 style="margin-top:0; color:var(--muted)">Active Security Operator Registry</h4>
+            <ul class="user-list">
+                {% for user in users %}
+                <li class="user-item">
+                    <span>👤 {{ user }}</span>
+                    {% if user != 'admin' %}
+                    <button class="btn btn-del" onclick="liquidateUser('{{ user }}')">Revoke Identity</button>
+                    {% else %}
+                    <span style="font-size:11px; color:var(--accent); font-weight:700">Root Superuser</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
+</div>
 
-    <script>
-        // Form trigger execution via JavaScript AJAX
-        document.getElementById('addUserForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            let formData = new FormData();
-            formData.append('username', document.getElementById('add_user').value);
-            formData.append('password', document.getElementById('add_pass').value);
-            formData.append('role', document.getElementById('add_role').value);
+<script>
+    function provisionUser() {
+        const u = document.getElementById('new_user').value;
+        const p = document.getElementById('new_pass').value;
+        if(!u || !p) return alert("Fill credentials entries fields!");
+        
+        fetch('/manage_user_action', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({action: 'add', username: u, password: p})
+        }).then(res => res.json()).then(data => { alert(data.message); location.reload(); });
+    }
 
-            fetch('/add_user', { method: 'POST', body: formData })
-            .then(res => res.json())
-            .then(data => {
-                alert(data.msg);
-                if(data.status === 'success') window.location.reload();
-            });
-        });
-
-        function triggerAction(userId, action) {
-            if(action === 'delete' && !confirm('Kya aap sach me is user ko delete karna chahte hain?')) return;
-            
-            fetch(`/update_user_status/${userId}/${action}`, { method: 'POST' })
-            .then(res => res.json())
-            .then(data => {
-                if(data.status === 'success') window.location.reload();
-                else alert(data.msg);
-            });
-        }
-    </script>
+    function liquidateUser(targetUser) {
+        if(!confirm("Revoke operator access access privileges for: " + targetUser + "?")) return;
+        fetch('/manage_user_action', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({action: 'delete', username: targetUser})
+        }).then(res => res.json()).then(data => { alert(data.message); location.reload(); });
+    }
+</script>
 </body>
 </html>

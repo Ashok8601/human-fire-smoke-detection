@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Security Core Configurations</title>
+    <style>
+        :root {
+            --bg-base: #020617; --bg-card: #0f172a; --border: #1e293b;
+            --primary: #2563eb; --accent: #f59e0b; --text: #f8fafc; --muted: #64748b;
+        }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-base); color: var(--text); padding: 30px; display: flex; justify-content: center; }
+        .settings-frame { width: 100%; max-width: 800px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
+        h2 { margin: 0; font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+        .back-nav { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .block-unit { background: rgba(2,6,23,0.4); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        .block-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin: 0 0 16px 0; }
+        
+        .row-grid { display: grid; grid-template-columns: 2fr 1.5fr 0.5fr; gap: 20px; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.02); }
+        .row-grid:last-child { border-bottom: none; }
+        .slider-flex { display: flex; align-items: center; gap: 10px; }
+        .slider-flex input { width: 100%; accent-color: var(--primary); cursor: pointer; }
+        .lbl-val { font-size: 13px; font-weight: 700; color: var(--muted); width: 35px; text-align: right; }
+        
+        .switch { position: relative; display: inline-block; width: 42px; height: 22px; justify-self: end; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider-cap { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background: #334155; transition: .2s; border-radius: 20px; }
+        .slider-cap:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background: white; transition: .2s; border-radius: 50%; }
+        input:checked + .slider-cap { background: var(--primary); }
+        input:checked + .slider-cap:before { transform: translateX(20px); }
+        
+        .matrix-layout { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 10px; text-align: center; font-size: 13px; }
+        .m-header { font-weight: 700; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+        .m-cell { padding: 8px 0; display: flex; align-items: center; justify-content: center; }
+        
+        .txt-field { width: 100%; background: #020617; border: 1px solid var(--border); color: #fff; padding: 12px; border-radius: 6px; font-size: 14px; outline: none; margin-top: 6px; }
+        .txt-field:focus { border-color: var(--primary); }
+        
+        .submit-btn { background: #10b981; color: white; border: none; width: 100%; padding: 14px; border-radius: 8px; font-weight: 800; font-size: 15px; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.2); transition: background 0.2s; }
+        .submit-btn:hover { background: #059669; }
+    </style>
+</head>
+<body>
+
+<div class="settings-frame">
+    <div class="header">
+        <h2>🛠️ Threat Matrix Backplane Configurator</h2>
+        <a href="/" class="back-nav">➔ Exit Controls Panel</a>
+    </div>
+
+    <div class="block-unit">
+        <h3 class="block-title">1. Computer Vision Neural Network Models</h3>
+        <div class="row-grid">
+            <span>YOLO Custom Fire Analysis Model</span>
+            <div class="slider-flex">
+                <input type="range" id="fire_thresh" min="0.1" max="0.95" step="0.05" value="{{ config.fire_thresh }}" oninput="syncLabel('fire', this.value)">
+                <span class="lbl-val" id="val_fire">{{ (config.fire_thresh*100)|int }}%</span>
+            </div>
+            <label class="switch"><input type="checkbox" id="fire_on" {% if config.fire_on %}checked{% endif %}><span class="slider-cap"></span></label>
+        </div>
+        <div class="row-grid">
+            <span>YOLO Custom Smoke Analysis Model</span>
+            <div class="slider-flex">
+                <input type="range" id="smoke_thresh" min="0.1" max="0.95" step="0.05" value="{{ config.smoke_thresh }}" oninput="syncLabel('smoke', this.value)">
+                <span class="lbl-val" id="val_smoke">{{ (config.smoke_thresh*100)|int }}%</span>
+            </div>
+            <label class="switch"><input type="checkbox" id="smoke_on" {% if config.smoke_on %}checked{% endif %}><span class="slider-cap"></span></label>
+        </div>
+        <div class="row-grid">
+            <span>YOLO COCO Base Human Intrusion Tracker</span>
+            <div class="slider-flex">
+                <input type="range" id="human_thresh" min="0.1" max="0.95" step="0.05" value="{{ config.human_thresh }}" oninput="syncLabel('human', this.value)">
+                <span class="lbl-val" id="val_human">{{ (config.human_thresh*100)|int }}%</span>
+            </div>
+            <label class="switch"><input type="checkbox" id="human_on" {% if config.human_on %}checked{% endif %}><span class="slider-cap"></span></label>
+        </div>
+    </div>
+
+    <div class="block-unit">
+        <h3 class="block-title">2. Notification Pipeline Output Matrix</h3>
+        <div class="matrix-layout">
+            <div class="m-header" style="text-align:left;">Analytic Target</div>
+            <div class="m-header">Linux GPIO 18</div>
+            <div class="m-header">WiFi COM3 Out</div>
+            <div class="m-header">Email Alerts</div>
+
+            <div class="m-cell" style="justify-content:flex-start; font-weight:600;">Fire Events</div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="gpio_alarm_fire" {% if config.gpio_alarm_fire %}checked{% endif %}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="wifi_alarm_fire" {% if config.wifi_alarm_fire %}checked{% endif %}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="email_alert_fire" {% if config.email_alert_fire %}checked{% endif %}><span class="slider-cap"></span></label></div>
+
+            <div class="m-cell" style="justify-content:flex-start; font-weight:600;">Smoke Inversions</div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="gpio_alarm_smoke" {% if config.gpio_alarm_smoke %}checked{% endif %}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="wifi_alarm_smoke" {% if config.wifi_alarm_smoke %}checked{% endif %}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="email_alert_smoke" {% if config.email_alert_smoke %}checked{% endif %}><span class="slider-cap"></span></label></div>
+
+            <div class="m-cell" style="justify-content:flex-start; font-weight:600;">Human Intrusions</div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="gpio_alarm_human" {% if config.gpio_alarm_human %}checked{% endif %}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="wifi_alarm_human" {% if config.wifi_alarm_human %}checked{% endif %}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" id="email_alert_human" {% if config.email_alert_human %}checked{% endif %}><span class="slider-cap"></span></label></div>
+        </div>
+    </div>
+
+    <div class="block-unit">
+        <h3 class="block-title">3. Secure SMTP Distribution Configuration</h3>
+        <label style="font-size:13px; color:var(--muted)">Target Email Channels Group (Separated by commas):</label>
+        <input type="text" id="email_recipients" class="txt-field" value="{{ config.email_recipients }}">
+    </div>
+
+    <div class="block-unit" style="border:1px dashed #ef4444; background: rgba(239,68,68,0.02)">
+        <h3 class="block-title" style="color:#ef4444">4. Strategic Hardware Override System Test</h3>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span>Force System Alarm Lines Hot (HIGH State)</span>
+            <label class="switch"><input type="checkbox" id="alarm_manual_override" {% if config.alarm_manual_override %}checked{% endif %}><span class="slider-cap"></span></label>
+        </div>
+    </div>
+
+    <button class="submit-btn" onclick="commitChangesToSqlDatabase()">💾 SAVE SYSTEM CHANGES</button>
+</div>
+
+<script>
+    function syncLabel(target, value) {
+        document.getElementById('val_' + target).innerText = Math.round(value * 100) + '%';
+    }
+
+    function commitChangesToSqlDatabase() {
+        const matrixPayload = {
+            fire_on: document.getElementById('fire_on').checked,
+            smoke_on: document.getElementById('smoke_on').checked,
+            human_on: document.getElementById('human_on').checked,
+            fire_thresh: parseFloat(document.getElementById('fire_thresh').value),
+            smoke_thresh: parseFloat(document.getElementById('smoke_thresh').value),
+            human_thresh: parseFloat(document.getElementById('human_thresh').value),
+            gpio_alarm_fire: document.getElementById('gpio_alarm_fire').checked,
+            gpio_alarm_smoke: document.getElementById('gpio_alarm_smoke').checked,
+            gpio_alarm_human: document.getElementById('gpio_alarm_human').checked,
+            wifi_alarm_fire: document.getElementById('wifi_alarm_fire').checked,
+            wifi_alarm_smoke: document.getElementById('wifi_alarm_smoke').checked,
+            wifi_alarm_human: document.getElementById('wifi_alarm_human').checked,
+            email_alert_fire: document.getElementById('email_alert_fire').checked,
+            email_alert_smoke: document.getElementById('email_alert_smoke').checked,
+            email_alert_human: document.getElementById('email_alert_human').checked,
+            alarm_manual_override: document.getElementById('alarm_manual_override').checked,
+            email_recipients: document.getElementById('email_recipients').value
+        };
+
+        fetch('/commit_settings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(matrixPayload)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.status === 'success') {
+                alert("🔒 Enterprise Configurations committed permanently to SQLite3 database database!");
+            } else {
+                alert("❌ Fail: " + data.status);
+            }
+        });
+    }
+</script>
+</body>
+</html>
