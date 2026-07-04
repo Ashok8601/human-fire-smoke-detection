@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECURE MATRIX - SYSTEM LOGS</title>
+    <style>
+        * { box-sizing: border-box; }
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: #020617; color: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .container {
+            max-width: 1200px; margin: 0 auto; padding: 40px 20px;
+        }
+        .header-area {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; margin-bottom: 30px;
+        }
+        .title-area h1 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: 0.5px; }
+        .title-area p { margin: 5px 0 0 0; color: #64748b; font-size: 14px; }
+        
+        .btn-back {
+            background: rgba(37, 99, 235, 0.85); color: white; padding: 10px 20px;
+            text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s;
+        }
+        .btn-back:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+        /* Log Table Styling */
+        .log-table-container {
+            background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+        th { background: #0f172a; padding: 16px; color: #f59e0b; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        td { padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); font-family: monospace; }
+        tr:hover { background: rgba(255,255,255,0.02); }
+
+        /* Status Badges */
+        .status { padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 900; text-transform: uppercase; }
+        .status-CRITICAL { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+        .status-WARNING { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+        .status-INFO { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid #22c55e; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-area">
+            <div class="title-area">
+                <h1>📜 SYSTEM AUDIT LOG HISTORY</h1>
+                <p>Telemetry vector archives and pipeline events</p>
+            </div>
+            <a href="/" class="btn-back">◀ Back to Console</a>
+        </div>
+
+        <div class="log-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Event Type</th>
+                        <th>Severity</th>
+                        <th>Message / Payload Trace</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-07-04 15:02:11</td>
+                        <td>FIRE_DETECTION</td>
+                        <td><span class="status status-CRITICAL">Critical</span></td>
+                        <td>Threat signature matched in Sector B-4 (Confidence: 94.2%)</td>
+                    </tr>
+                    <tr>
+                        <td>2026-07-04 14:55:03</td>
+                        <td>SMOKE_DETECTION</td>
+                        <td><span class="status status-WARNING">Warning</span></td>
+                        <td>Dense particles registered on primary optical lens</td>
+                    </tr>
+                    <tr>
+                        <td>2026-07-04 14:30:00</td>
+                        <td>GITHUB_ACT_CI</td>
+                        <td><span class="status status-INFO">Info</span></td>
+                        <td>Auto-deployment sequence success: Commit v2.0 integrated</td>
+                    </tr>
+                    <tr>
+                        <td>2026-07-04 14:12:45</td>
+                        <td>NETWORK_SWITCH</td>
+                        <td><span class="status status-INFO">Info</span></td>
+                        <td>LAN interface active. Hotspot-Fallback shifted to standby mode.</td>
+                    </tr>
+                    <tr>
+                        <td>2026-07-04 14:00:12</td>
+                        <td>SYSTEM_INIT</td>
+                        <td><span class="status status-INFO">Info</span></td>
+                        <td>AI Analytics Core booted successfully. Engine accuracy nominal.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
