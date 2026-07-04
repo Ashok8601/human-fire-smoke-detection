@@ -10,19 +10,27 @@ jobs:
     runs-on: self-hosted  # Ye aapke Raspberry Pi runner ko target karega
 
     steps:
-    # 1. GitHub se naya code khinch kar lana (Auto Fetch/Pull)
+    # 1. GitHub se naya code khinch kar lana (Runner ke temporary folder me)
     - name: Checkout Code
       uses: actions/checkout@v4
       with:
         submodules: false
 
-    # 2. Python dependencies ko update karna
+    # 2. Python dependencies ko update karna (Sahi environment activate karke)
     - name: Install Dependencies
       run: |
         source /home/hesham/myenv/bin/activate
-        pip install -r req.txt
+        if [ -f req.txt ]; then
+          pip install -r req.txt
+        elif [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
 
-    # 3. Waitress Production Service ko restart karna
-    - name: Restart Waitress Server
+    # 3. Code ko main working folder me Sync karna aur Server Restart karna
+    - name: Sync Code and Restart Server
       run: |
+        # Isse downloaded code aapke main folder me automatic copy ho jayega
+        rsync -avz --exclude='.git' --exclude='.github' ./ /home/hesham/human-fire-smoke-detection/
+        
+        # Ab aapki production service bina kisi path pange ke restart ho jayegi
         sudo systemctl restart fire-detection
