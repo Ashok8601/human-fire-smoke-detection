@@ -371,7 +371,7 @@ def users_management():
 # ==================== REST APIS FOR DASHBOARD MANAGEMENT ====================
 @app.route('/video_feed')
 def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame',direct_passthrough=True)
 
 @app.route('/get_alerts')
 def get_alerts():
