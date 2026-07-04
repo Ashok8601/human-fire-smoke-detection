@@ -1,0 +1,26 @@
+name: CI/CD Deployment to Raspberry Pi
+
+on:
+  push:
+    branches:
+      - main  # Jab aap main branch par push karenge tabhi chalega
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # Ye aapke Raspberry Pi runner ko target karega
+
+    steps:
+    # 1. GitHub se naya code khinch kar lana (Auto Fetch/Pull)
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Python dependencies ko update karna
+    - name: Install Dependencies
+      run: |
+        source /home/hesham/myenv/bin/activate
+        pip install -r req.txt
+
+    # 3. Waitress Production Service ko restart karna
+    - name: Restart Waitress Server
+      run: |
+        sudo systemctl restart fire-detection
