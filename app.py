@@ -430,6 +430,22 @@ def manage_user_action():
             
     conn.close()
     return jsonify({"message": msg})
+@app.route('/logs')
+def system_logs():
+    # Maan lo aapka alerts ka data kisi list ya function se aata hai (jaise /get_alerts me use ho raha hai)
+    # Agar aapke paas 'all_alerts' naam ki list hai, toh hum use template me bhejenge
+    try:
+        # Agar aapke backend me alerts ki koi global list hai (jaise: global_alerts_list)
+        # Toh use yahan pass kar do. Abhi ke liye hum dummy fallback ke saath de rahe hain:
+        detected_logs = [
+            {"time": "2026-07-04 15:02:11", "type": "FIRE", "severity": "Critical", "msg": "Threat signature matched in Sector B-4 (Confidence: 94.2%)"},
+            {"time": "2026-07-04 14:55:03", "type": "SMOKE", "severity": "Warning", "msg": "Dense particles registered on primary optical lens"},
+            {"time": "2026-07-04 14:30:00", "type": "HUMAN", "severity": "Info", "msg": "Human detected near perimeter gate 2"},
+        ]
+        return render_template('logs.html', logs=detected_logs)
+    except Exception as e:
+        return f"Log system error: {str(e)}", 500
+
 if __name__ == '__main__':
     start_hardware_interfaces()
     from waitress import serve
