@@ -371,7 +371,7 @@ def users_management():
 # ==================== REST APIS FOR DASHBOARD MANAGEMENT ====================
 @app.route('/video_feed')
 def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame',direct_passthrough=True)
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/get_alerts')
 def get_alerts():
@@ -430,8 +430,12 @@ def manage_user_action():
             
     conn.close()
     return jsonify({"message": msg})
-
 if __name__ == '__main__':
+    start_hardware_interfaces()
+    from waitress import serve
+    print("🚀 Waitress production server running on port 8000...")
+    serve(app, host='0.0.0.0', port=8000, threads=4)
+'''if __name__ == '__main__':
     init_db()
     start_hardware_interfaces()
-    app.run(debug=False, host='0.0.0.0', port=5000, threaded=True)
+    app.run(debug=False, host='0.0.0.0', port=5000, threaded=True)'''
