@@ -13,6 +13,8 @@ jobs:
     # 1. GitHub se naya code khinch kar lana (Auto Fetch/Pull)
     - name: Checkout Code
       uses: actions/checkout@v4
+      with:
+        submodules: false
 
     # 2. Python dependencies ko update karna
     - name: Install Dependencies
