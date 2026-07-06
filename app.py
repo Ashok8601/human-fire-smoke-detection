@@ -201,6 +201,12 @@ def init_db():
 
         "alarm_manual_override": "0",
         "email_recipients": "security@firm.com,manager@firm.com",
+    
+        "cam_resolution": "640x480",
+        "cam_quality": "SD",
+        "cam_fps": "15",
+        "cam_zoom": "1",
+        "cam_brightness": "128",
     }
 
     for key, value in default_configs.items():
@@ -640,7 +646,7 @@ def ai_inference_engine():
 # ==========================================================
 # STREAM
 # ==========================================================
-def generate_frames():
+'''def generate_frames():
     while True:
         with frame_lock:
             frame = None if output_frame is None else output_frame.copy()
@@ -660,7 +666,9 @@ def generate_frames():
             + b"\r\n"
         )
 
-        time.sleep(1 / max(CAMERA_FPS, 1))
+        time.sleep(1 / max(CAMERA_FPS, 1))'''
+
+
 
 
 # ==========================================================
@@ -884,6 +892,94 @@ def manage_user_action():
         conn.close()
 
 
+
+# ==========================================================
+# camera settings
+# ==========================================================
+# ==========================================================
+# EXTRA ROUTE: CAMERA SETTINGS PAGE
+# ==========================================================
+@app.route("/camera_settings")
+@login_required
+def camera_settings():
+    conn = get_db()
+    # Database se saari settings uthao
+    rows = conn.execute("SELECT key, value FROM settings WHERE key LIKE 'cam_%'").fetchall()
+    conn.close()
+    
+    cam_conf = {row["key"]: row["value"] for row in rows}
+    return render_template("camera.html", config=cam_conf)
+
+
+@app.route("/commit_camera_settings", methods=["POST"])
+@login_required
+def commit_camera_settings():
+    data = request.json or {}
+    
+    allowed_cam_keys = {
+        "cam_resolution", "cam_fps", "cam_quality", 
+        "cam_zoom", "cam_brightness", "cam_contrast"
+    }
+    
+    conn = get_db()
+    cur = conn.cursor()
+    try:
+        for key, value in data.items():
+            if key not in allowed_cam_keys:
+                continue
+            cur.execute("INSERT OR REPLACE INTO settings(key, value) VALUES (?, ?)", (key, str(value)))
+        
+        conn.commit()
+        
+        # 🔄 Jadu: Settings update hote hi background mein camera ko restart/reconfigure karo
+        global camera
+        with frame_lock:
+            if camera is not None:
+                camera.release()
+                camera = None # Background worker ise khud naye settings se open karega
+                
+        return jsonify({"status": "success", "message": "Camera settings applied successfully!"})
+    except Exception as e:
+        conn.rollback()
+        return jsonify({"status": "error", "message": str(e)}), 500
+    finally:
+        conn.close()
+
+# ==========================================================
+# OPTIMIZED STREAM GENERATOR (LAG & DELAY FIX)
+# ==========================================================
+def generate_frames():
+    while True:
+        with frame_lock:
+            frame = None if output_frame is None else output_frame.copy()
+
+        if frame is None:
+            time.sleep(0.03) # Prevent CPU hogging
+            continue
+
+        # 🚀 LAG FIX: Quality setting ke mutabik JPEG compression dynamically change hoga
+        conn = get_db()
+        quality_row = conn.execute("SELECT value FROM settings WHERE key='cam_quality'").fetchone()
+        conn.close()
+        
+        jpeg_quality = 50 # Default SD/Low lag
+        if quality_row and quality_row["value"] == "HD":
+            jpeg_quality = 85
+        elif quality_row and quality_row["value"] == "MD":
+            jpeg_quality = 70
+
+        # Encode with specific quality to reduce network bandwidth lag
+        ok, buffer = cv2.imencode(".jpg", frame, [int(cv2.IMWRITE_JPEG_QUALITY), jpeg_quality])
+        if not ok:
+            continue
+
+        yield (
+            b"--frame\r\n"
+            b"Content-Type: image/jpeg\r\n\r\n"
+            + buffer.tobytes()
+            + b"\r\n"
+        )
+        time.sleep(0.01) 
 # ==========================================================
 # MAIN
 # ==========================================================
