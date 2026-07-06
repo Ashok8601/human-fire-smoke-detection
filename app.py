@@ -681,29 +681,30 @@ def login():
         password = request.form.get("password", "")
 
         conn = get_db()
-        # 🌟 Row factory ko active rakha hai taki column ke naam (Key) se data nikal sakein
-        conn.row_factory = sqlite3.Row 
+        # Row factory hata dete hain taaki ek simple tuple mile, index ka koi lafda hi na rahe!
+        conn.row_factory = None 
         user = conn.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         conn.close()
 
         if user:
-            # 🔐 1. SHA256 Hash Check (Naye secure database ke liye)
-            try:
-                if check_password_hash(user["password_hash"], password):
-                    session["user"] = username
-                    add_audit_log("LOGIN", f"{username} logged in")
-                    return redirect(url_for("index"))
-            except Exception as e:
-                logging.warning(f"Hash check skipped or failed: {e}")
-
-            # 📝 2. Plain Text Fallback (Purane database ke liye - safety layer)
-            try:
-                if user["password_hash"] == password:
-                    session["user"] = username
-                    add_audit_log("LOGIN", f"{username} logged in")
-                    return redirect(url_for("index"))
-            except Exception as e:
-                logging.error(f"Plain text check failed: {e}")
+            # user ki value aa rahi hai: ('admin', 'admin123') ya ('admin', 'hash_value', ...)
+            # Hum loop chalakar har ek item ko check karenge ki kya woh tumhare password se match hota hai!
+            for item in user:
+                if isinstance(item, str):
+                    # 1. Check karo agar woh secure hash hai
+                    try:
+                        if check_password_hash(item, password):
+                            session["user"] = username
+                            add_audit_log("LOGIN", f"{username} logged in")
+                            return redirect(url_for("index"))
+                    except Exception:
+                        pass
+                    
+                    # 2. Check karo agar woh plain text password hai (jaise admin123)
+                    if item == password:
+                        session["user"] = username
+                        add_audit_log("LOGIN", f"{username} logged in")
+                        return redirect(url_for("index"))
 
         return render_template("login.html", error="Invalid Operator Credentials")
 
