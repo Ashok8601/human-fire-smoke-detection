@@ -681,29 +681,29 @@ def login():
         password = request.form.get("password", "")
 
         conn = get_db()
-        # Row factory hata dete hain taaki simple tuple mile, jise samajhna aasan ho
-        conn.row_factory = None 
-        
+        # 🌟 Row factory ko active rakha hai taki column ke naam (Key) se data nikal sakein
+        conn.row_factory = sqlite3.Row 
         user = conn.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         conn.close()
 
-        # 🌟 LOGGING MAGIC: Yeh line terminal par print karegi ki 'user' ke andar kya data aaya hai
-        logging.warning(f"=== DEBUG LOGIN === User found in DB: {user} | Type: {type(user)}")
-
         if user:
+            # 🔐 1. SHA256 Hash Check (Naye secure database ke liye)
             try:
-                # Agar database mein 2 ya usse zyada items hain, toh loop chala kar check karein
-                # Ki kis index par password match ho raha hai
-                for item in user:
-                    try:
-                        if isinstance(item, str) and check_password_hash(item, password):
-                            session["user"] = username
-                            add_audit_log("LOGIN", f"{username} logged in")
-                            return redirect(url_for("index"))
-                    except Exception:
-                        pass
+                if check_password_hash(user["password_hash"], password):
+                    session["user"] = username
+                    add_audit_log("LOGIN", f"{username} logged in")
+                    return redirect(url_for("index"))
             except Exception as e:
-                logging.error(f"Loop check failed: {e}")
+                logging.warning(f"Hash check skipped or failed: {e}")
+
+            # 📝 2. Plain Text Fallback (Purane database ke liye - safety layer)
+            try:
+                if user["password_hash"] == password:
+                    session["user"] = username
+                    add_audit_log("LOGIN", f"{username} logged in")
+                    return redirect(url_for("index"))
+            except Exception as e:
+                logging.error(f"Plain text check failed: {e}")
 
         return render_template("login.html", error="Invalid Operator Credentials")
 
