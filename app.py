@@ -674,7 +674,6 @@ def login_required(f):
         return f(*args, **kwargs)
     return wrapper
 
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -682,19 +681,28 @@ def login():
         password = request.form.get("password", "")
 
         conn = get_db()
+       
+        conn.row_factory = sqlite3.Row 
+        
         user = conn.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         conn.close()
 
-        if user and check_password_hash(user["password_hash"], password):
-            session["user"] = username
-            add_audit_log("LOGIN", f"{username} logged in")
-            return redirect(url_for("index"))
+               try:
+            # Agar RowFactory chal raha hai toh yeh best hai:
+            if user and check_password_hash(user["password_hash"], password):
+                session["user"] = username
+                add_audit_log("LOGIN", f"{username} logged in")
+                return redirect(url_for("index"))
+        except IndexError:
+  
+            if user and (check_password_hash(user[1], password) or check_password_hash(user[2], password)):
+                session["user"] = username
+                add_audit_log("LOGIN", f"{username} logged in")
+                return redirect(url_for("index"))
 
         return render_template("login.html", error="Invalid Operator Credentials")
 
     return render_template("login.html")
-
-
 @app.route("/logout")
 def logout():
     user = session.get("user", "unknown")
