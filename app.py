@@ -680,31 +680,41 @@ def login():
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
 
+        logging.warning(f"=== LOGIN ATTEMPT === User typed: Username='{username}', Password='{password}'")
+
         conn = get_db()
-        # Row factory hata dete hain taaki ek simple tuple mile, index ka koi lafda hi na rahe!
         conn.row_factory = None 
         user = conn.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         conn.close()
 
+        logging.warning(f"=== DB RESULT === Found Row: {user}")
+
         if user:
-            # user ki value aa rahi hai: ('admin', 'admin123') ya ('admin', 'hash_value', ...)
-            # Hum loop chalakar har ek item ko check karenge ki kya woh tumhare password se match hota hai!
-            for item in user:
+            # Pura check terminal par log karenge
+            for index, item in enumerate(user):
                 if isinstance(item, str):
-                    # 1. Check karo agar woh secure hash hai
+                    # Hash Check
                     try:
                         if check_password_hash(item, password):
+                            logging.warning(f"🎯 MATCH FOUND! (Hash match at index {index})")
                             session["user"] = username
                             add_audit_log("LOGIN", f"{username} logged in")
                             return redirect(url_for("index"))
-                    except Exception:
-                        pass
+                    except Exception as e:
+                        logging.warning(f"Hash check error at index {index}: {e}")
                     
-                    # 2. Check karo agar woh plain text password hai (jaise admin123)
-                    if item == password:
+                    # Plain Text Check
+                    if item.strip() == password.strip():
+                        logging.warning(f"🎯 MATCH FOUND! (Plain text match at index {index})")
                         session["user"] = username
+                        session.modified = True  # Force Flask to save session
                         add_audit_log("LOGIN", f"{username} logged in")
+                        logging.warning(f"=== REDIRECTING === Session user set to: {session.get('user')}")
                         return redirect(url_for("index"))
+
+            logging.warning("❌ DB mein user mila, par password kahin bhi match nahi hua!")
+        else:
+            logging.warning("❌ Database mein is username ka koi banda hi nahi mila!")
 
         return render_template("login.html", error="Invalid Operator Credentials")
 
