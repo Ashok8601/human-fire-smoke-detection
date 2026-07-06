@@ -32,5 +32,12 @@ jobs:
         # Isse downloaded code aapke main folder me automatic copy ho jayega
         rsync -avz --exclude='.git' --exclude='.github' ./ /home/hesham/human-fire-smoke-detection/
         
+        # 🛡️ SAFETY & AUTOMATION LAYER: 
+        # Pehle systemd daemon ko reload karenge taaki agar code me koi service ya env change ho toh Pi use samajh sake
+        sudo systemctl daemon-reload
+        
         # Ab aapki production service bina kisi path pange ke restart ho jayegi
-        sudo systemctl restart fire-detection
+        sudo systemctl restart fire-detection.service
+        
+        # 🎯 Ensure runner backplane is active and service status is green
+        sudo systemctl is-active fire-detection.service
