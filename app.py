@@ -681,24 +681,29 @@ def login():
         password = request.form.get("password", "")
 
         conn = get_db()
-        conn.row_factory = sqlite3.Row 
+        # Row factory hata dete hain taaki simple tuple mile, jise samajhna aasan ho
+        conn.row_factory = None 
         
         user = conn.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         conn.close()
 
-        # 🌟 Ekdum Sahi Indentation Waala Block:
-        try:
-            # Agar RowFactory chal raha hai toh yeh best hai:
-            if user and check_password_hash(user["password_hash"], password):
-                session["user"] = username
-                add_audit_log("LOGIN", f"{username} logged in")
-                return redirect(url_for("index"))
-        except (IndexError, KeyError):  # KeyError bhi add kar diya taaki dict key na milne par bhi crash na ho
-            # Safe Fallback: Agar upar wala fail ho toh index se try karega
-            if user and (check_password_hash(user[1], password) or check_password_hash(user[2], password)):
-                session["user"] = username
-                add_audit_log("LOGIN", f"{username} logged in")
-                return redirect(url_for("index"))
+        # 🌟 LOGGING MAGIC: Yeh line terminal par print karegi ki 'user' ke andar kya data aaya hai
+        logging.warning(f"=== DEBUG LOGIN === User found in DB: {user} | Type: {type(user)}")
+
+        if user:
+            try:
+                # Agar database mein 2 ya usse zyada items hain, toh loop chala kar check karein
+                # Ki kis index par password match ho raha hai
+                for item in user:
+                    try:
+                        if isinstance(item, str) and check_password_hash(item, password):
+                            session["user"] = username
+                            add_audit_log("LOGIN", f"{username} logged in")
+                            return redirect(url_for("index"))
+                    except Exception:
+                        pass
+            except Exception as e:
+                logging.error(f"Loop check failed: {e}")
 
         return render_template("login.html", error="Invalid Operator Credentials")
 
