@@ -681,20 +681,20 @@ def login():
         password = request.form.get("password", "")
 
         conn = get_db()
-       
         conn.row_factory = sqlite3.Row 
         
         user = conn.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         conn.close()
 
-               try:
+        # 🌟 Ekdum Sahi Indentation Waala Block:
+        try:
             # Agar RowFactory chal raha hai toh yeh best hai:
             if user and check_password_hash(user["password_hash"], password):
                 session["user"] = username
                 add_audit_log("LOGIN", f"{username} logged in")
                 return redirect(url_for("index"))
-        except IndexError:
-  
+        except (IndexError, KeyError):  # KeyError bhi add kar diya taaki dict key na milne par bhi crash na ho
+            # Safe Fallback: Agar upar wala fail ho toh index se try karega
             if user and (check_password_hash(user[1], password) or check_password_hash(user[2], password)):
                 session["user"] = username
                 add_audit_log("LOGIN", f"{username} logged in")
