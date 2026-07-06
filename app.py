@@ -383,12 +383,16 @@ def start_hardware_interfaces():
 # ACTUATORS
 # ==========================================================
 def trigger_wifi_alarm_worker(state):
+    endpoint = "on" if state else "off"
+    url = f"http://{ESP32_IP.strip()}/led/{endpoint}"
+    
     try:
-        endpoint = "on" if state else "off"
-        requests.get(f"http://{ESP32_IP.strip()}/led/{endpoint}", timeout=0.5)
-    except Exception as e:
-        logging.warning(f"ESP32 WiFi alarm failed: {e}")
-
+        response = requests.get(url, timeout=0.3)
+        
+        if response.status_code == 200:
+            logging.info(f"⚡ ESP32 Alarm Sent: {endpoint}")
+    except requests.exceptions.RequestException:
+        pass
 
 def set_gpio(state):
     cmd = "dh" if state else "dl"
@@ -417,14 +421,12 @@ def trigger_hardware_actuators(gpio_state, wifi_state):
         )
 
         too_fast = now - last_actuator_state["last_time"] < ACTUATOR_MIN_INTERVAL
-
         if same_state and too_fast:
             return
 
         last_actuator_state["gpio"] = gpio_state
         last_actuator_state["wifi"] = wifi_state
         last_actuator_state["last_time"] = now
-
     set_gpio(gpio_state)
     set_serial(gpio_state)
     threading.Thread(target=trigger_wifi_alarm_worker, args=(wifi_state,), daemon=True).start()
