@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Security Matrix</title>
+    <title>Enterprise Security & Safety Matrix</title>
     <style>
         * { box-sizing: border-box; }
         body, html {
@@ -53,10 +53,13 @@
         .alert-card:hover { transform: scale(1.06); border-color: #f59e0b; }
         .alert-card img { width: 100%; height: 100%; object-fit: cover; }
         
-        .badge { position: absolute; top: 4px; left: 4px; font-size: 8px; font-weight: 900; color: #fff; padding: 2px 5px; border-radius: 3px; text-transform: uppercase; }
-        .badge-FIRE { background: #ef4444; }
-        .badge-SMOKE { background: #64748b; }
-        .badge-HUMAN { background: #22c55e; }
+        .badge { position: absolute; top: 4px; left: 4px; font-size: 8px; font-weight: 900; color: #fff; padding: 2px 5px; border-radius: 3px; text-transform: uppercase; white-space: nowrap; }
+        
+        /* Predefined Static Badges Class Maps */
+        .badge-FIRE { background: #ef4444 !important; }
+        .badge-SMOKE { background: #64748b !important; }
+        .badge-HUMAN { background: #22c55e !important; }
+        .badge-WORKER { background: #10b981 !important; }
 
         /* Dialog Inspector Overlay */
         .modal {
@@ -86,7 +89,7 @@
 <body>
 
     <div class="viewport-container">
-        <img class="live-stream" src="{{ url_for('video_feed') }}" alt="Live Feed">
+        <img class="live-stream" src="{{ url_for('video_feed') }}" alt="Live Cam Feed">
 
         <div class="floating-top-header">
             <h1 class="title-plate"><span style="color:#ef4444; animation: blink 1s infinite;">●</span> SECURE ANALYTICS CONSOLE</h1>
@@ -127,11 +130,11 @@
             fetch('/get_alerts')
                 .then(res => res.json())
                 .then(dataset => {
-                    if (dataset.length === 0) return;
+                    if (!dataset || dataset.length === 0) return;
                     const track = document.getElementById('logTrack');
                     const nullLabel = document.getElementById('nullLabel');
                     
-                    const freshIds = dataset.map(x => x.id);
+                    const freshIds = dataset.map(x => x.id || x.time); // Added fallback to time if item id isn't explicitly indexed
                     if (JSON.stringify(freshIds) === JSON.stringify(indexedCacheIds)) return; // 0% redraw blinks mechanism
                     
                     indexedCacheIds = freshIds;
@@ -142,10 +145,26 @@
                         const card = document.createElement('div');
                         card.className = 'alert-card';
                         card.onclick = () => openInspector(alert.url, alert.type, alert.accuracy, alert.time);
-                        card.innerHTML = `<span class="badge badge-${alert.type}">${alert.type}</span><img src="${alert.url}" loading="lazy">`;
+                        
+                        // --- DYNAMIC COLOR ASSIGNMENT LOGIC FOR PPE CLASSES ---
+                        const typeUpper = alert.type.toUpperCase();
+                        let customBgColor = "";
+                        
+                        // Checking if dynamic class represents a critical safety missing equipment violation
+                        if (typeUpper.includes("NO-") || typeUpper.includes("FALL") || typeUpper === "FIRE") {
+                            customBgColor = "background-color: #ef4444;"; // Red for violations
+                            card.style.borderColor = "#ef4444";
+                        } else if (typeUpper === "HUMAN" || typeUpper === "WORKER" || typeUpper === "VEST" || typeUpper === "HARD_HAT") {
+                            customBgColor = "background-color: #22c55e;"; // Green for standard logs/safe assets
+                        } else {
+                            customBgColor = "background-color: #3b82f6;"; // Blue default for machinery/tools
+                        }
+
+                        card.innerHTML = `<span class="badge badge-${alert.type}" style="${customBgColor}">${alert.type}</span><img src="${alert.url}" loading="lazy">`;
                         track.appendChild(card);
                     });
-                });
+                })
+                .catch(err => console.error("Error polling alerts:", err));
         }
 
         function openInspector(url, type, accuracy, clock) {

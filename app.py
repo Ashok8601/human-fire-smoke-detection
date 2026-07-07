@@ -38,6 +38,7 @@ FOLDERS = {
     "fire": SNAPSHOT_DIR / "fire",
     "smoke": SNAPSHOT_DIR / "smoke",
     "human": SNAPSHOT_DIR / "human",
+    "ppe":SNAPSHOT_DIR / "ppe",
 }
 
 for folder in FOLDERS.values():
@@ -79,6 +80,7 @@ CAMERA_FPS = int(os.getenv("CAMERA_FPS", "15"))
 
 FIRE_MODEL_PATH = os.getenv("FIRE_MODEL_PATH", "best.pt")
 HUMAN_MODEL_PATH = os.getenv("HUMAN_MODEL_PATH", "yolov8n.pt")
+PPE_MODEL_PATH = "best1.pt"
 
 GPIO_PIN = os.getenv("GPIO_PIN", "18")
 SERVER_HOST = os.getenv("SERVER_HOST", "0.0.0.0")
@@ -114,7 +116,7 @@ system_state = {
 
 model_fire = None
 model_base = None
-
+model_ppe = None
 last_actuator_state = {
     "gpio": None,
     "wifi": None,
@@ -207,6 +209,34 @@ def init_db():
         "cam_fps": "15",
         "cam_zoom": "1",
         "cam_brightness": "128",
+        "ppe_on": "1",
+        "ppe_thresh": "0.35",
+        "gpio_alarm_ppe": "0",
+        "wifi_alarm_ppe": "0",
+        "email_alert_ppe": "0",
+        
+        "ppe_class_configs": json.dumps({
+            "No-Boots": {"on": True, "thresh": 0.35, "gpio": True, "wifi": True, "email": True},
+            "No-Ear-Protection": {"on": True, "thresh": 0.35, "gpio": False, "wifi": True, "email": False},
+            "No-Glass": {"on": True, "thresh": 0.35, "gpio": False, "wifi": True, "email": False},
+            "No-Glove": {"on": True, "thresh": 0.35, "gpio": True, "wifi": True, "email": True},
+            "No-Helmet": {"on": True, "thresh": 0.35, "gpio": True, "wifi": True, "email": True},
+            "No-Mask": {"on": True, "thresh": 0.35, "gpio": False, "wifi": True, "email": False},
+            "No-Vest": {"on": True, "thresh": 0.35, "gpio": True, "wifi": True, "email": True},
+            "Fall-Detected": {"on": True, "thresh": 0.40, "gpio": True, "wifi": True, "email": True},
+            "Boots": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Ear-Protection": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Glass": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Glove": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Hard_hat": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Mask": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Worker": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Vest": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Circular_Saw": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Fire_Extinguisher": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Fire_prevention_Net": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False},
+            "Welding_Equipment": {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False}
+        }),
     }
 
     for key, value in default_configs.items():
@@ -280,26 +310,35 @@ def save_alert_to_db(alert_type, accuracy, image_url):
 # MODEL LOADING
 # ==========================================================
 def load_models():
-    global model_fire, model_base
+    global model_fire, model_base, model_ppe
 
+    # 1. Fire Model
     try:
         model_fire = YOLO(FIRE_MODEL_PATH)
         system_state["fire_model_ok"] = True
         logging.info("Fire/smoke model loaded")
     except Exception as e:
         system_state["fire_model_ok"] = False
-        system_state["last_error"] = f"Fire model failed: {e}"
-        logging.error(system_state["last_error"])
+        logging.error(f"Fire model failed: {e}")
 
+    # 2. Human Model
     try:
         model_base = YOLO(HUMAN_MODEL_PATH)
         system_state["human_model_ok"] = True
         logging.info("Human model loaded")
     except Exception as e:
         system_state["human_model_ok"] = False
-        system_state["last_error"] = f"Human model failed: {e}"
-        logging.error(system_state["last_error"])
+        logging.error(f"Human model failed: {e}")
 
+    # 3. New PPE Model
+    try:
+        model_ppe = YOLO(PPE_MODEL_PATH)
+        system_state["ppe_model_ok"] = True
+        logging.info("PPE Violation model loaded successfully!")
+    except Exception as e:
+        system_state["ppe_model_ok"] = False
+        system_state["last_error"] = f"PPE model failed: {e}"
+        logging.error(system_state["last_error"])
 
 # ==========================================================
 # CAMERA + HARDWARE
@@ -489,18 +528,23 @@ def draw_label(frame, text, x, y, color):
         2
     )
 
-
 def ai_inference_engine():
     global output_frame
 
+    # Cooldown markers to prevent alert flooding
     last_save = {
         "fire": 0,
         "smoke": 0,
         "human": 0,
+        "ppe": 0,  # Shared cooldown for group rate-limiting
     }
+
+    # Explicit targets treated as safety violations
+    PPE_VIOLATION_CLASSES = ["No-Boots", "No-Ear-Protection", "No-Glass", "No-Glove", "No-Helmet", "No-Mask", "No-Vest", "Fall-Detected"]
 
     while True:
         try:
+            # 1. Thread-safe frame capture ingest pipeline
             with frame_lock:
                 if latest_frame is None:
                     frame = None
@@ -511,28 +555,34 @@ def ai_inference_engine():
                 time.sleep(0.05)
                 continue
 
+            # Load operational parameters from SQLite dynamic cache
             conf = get_config()
             annotated = frame.copy()
 
+            # Dynamic tracking structure for current frame execution
             detect_flags = {
                 "fire": False,
                 "smoke": False,
                 "human": False,
+                "ppe": False,
+                "gpio_ppe_trigger": False,  # Runtime flag for any class routing to GPIO
+                "wifi_ppe_trigger": False,  # Runtime flag for any class routing to WiFi
+                "email_ppe_trigger": False   # Runtime flag for any class routing to Email
             }
 
             alert_details = []
+            specific_ppe_violation = "PPE_VIOLATION" # Fallback context string
+            current_ppe_score = 0.35 # Fallback score cache
 
-            # ---------------- Fire / Smoke ----------------
+            # ---------------- 🔥 FIRE / SMOKE SUB-ENGINE ----------------
             if model_fire is not None and (conf.get("fire_on") or conf.get("smoke_on")):
                 try:
                     results_fire = model_fire(frame, verbose=False, imgsz=640)
-
                     for r in results_fire:
                         for box in r.boxes:
                             score = float(box.conf[0])
                             cls_id = int(box.cls[0])
                             label = str(model_fire.names[cls_id]).lower()
-
                             x1, y1, x2, y2 = map(int, box.xyxy[0])
 
                             if "fire" in label and conf.get("fire_on") and score >= conf.get("fire_thresh", 0.45):
@@ -546,38 +596,74 @@ def ai_inference_engine():
                                 alert_details.append(("smoke", score))
                                 cv2.rectangle(annotated, (x1, y1), (x2, y2), (120, 120, 120), 3)
                                 draw_label(annotated, f"SMOKE {score*100:.1f}%", x1, y1, (120, 120, 120))
-
                 except Exception as e:
-                    system_state["fire_model_ok"] = False
-                    system_state["last_error"] = f"Fire/smoke inference failed: {e}"
-                    logging.error(system_state["last_error"])
+                    logging.error(f"Fire inference pipeline exception: {e}")
 
-            # ---------------- Human ----------------
+            # ---------------- 👤 BASE HUMAN DETECTION ENGINE ----------------
             if model_base is not None and conf.get("human_on"):
                 try:
                     results_human = model_base(frame, classes=[0], verbose=False, imgsz=640)
-
                     for r in results_human:
                         for box in r.boxes:
                             score = float(box.conf[0])
-
                             if score >= conf.get("human_thresh", 0.50):
                                 detect_flags["human"] = True
                                 alert_details.append(("human", score))
-
                                 x1, y1, x2, y2 = map(int, box.xyxy[0])
                                 cv2.rectangle(annotated, (x1, y1), (x2, y2), (0, 255, 0), 3)
                                 draw_label(annotated, f"HUMAN {score*100:.1f}%", x1, y1, (0, 255, 0))
-
                 except Exception as e:
-                    system_state["human_model_ok"] = False
-                    system_state["last_error"] = f"Human inference failed: {e}"
-                    logging.error(system_state["last_error"])
+                    logging.error(f"Base Human processing pipeline crash: {e}")
 
-            # ---------------- Save alerts ----------------
+            # ---------------- 🛡️ GRANULAR PER-CLASS PPE ENGINE (`best1.pt`) ----------------
+            if model_ppe is not None:
+                try:
+                    # Database se 19-classes ki custom map configuration string fetch karke parse karo
+                    raw_class_json = conf.get("ppe_class_configs", "{}")
+                    class_settings = json.loads(raw_class_json) if isinstance(raw_class_json, str) else raw_class_json
+
+                    # High-resolution multi-object structural tracking loop
+                    results_ppe = model_ppe(frame, iou=0.45, verbose=False, imgsz=960)[0]
+                    
+                    for box in results_ppe.boxes:
+                        cls_id = int(box.cls[0])
+                        score = float(box.conf[0])
+                        class_name = model_ppe.names[cls_id]
+                        x1, y1, x2, y2 = map(int, box.xyxy[0])
+
+                        # Fallback recovery properties for non-configured runtime objects
+                        c_cfg = class_settings.get(class_name, {"on": False, "thresh": 0.50, "gpio": False, "wifi": False, "email": False})
+
+                        # Match validation based on individual dynamic class toggles and precision sliders
+                        if c_cfg.get("on", False) and score >= c_cfg.get("thresh", 0.50):
+                            
+                            # Standard color coding context selection
+                            if class_name in PPE_VIOLATION_CLASSES:
+                                color = (0, 0, 255)  # RED (Threat Vector)
+                                detect_flags["ppe"] = True
+                                specific_ppe_violation = class_name
+                                current_ppe_score = score
+                                alert_details.append(("ppe", score))
+                                
+                                # Evaluate hardware routing variables explicitly for this verified violation class
+                                if c_cfg.get("gpio"): detect_flags["gpio_ppe_trigger"] = True
+                                if c_cfg.get("wifi"): detect_flags["wifi_ppe_trigger"] = True
+                                if c_cfg.get("email"): detect_flags["email_ppe_trigger"] = True
+                            else:
+                                color = (255, 255, 0)  # CYAN/BLUE-GREEN (Compliance Target)
+
+                            cv2.rectangle(annotated, (x1, y1), (x2, y2), color, 2)
+                            draw_label(annotated, f"{class_name} {score*100:.1f}%", x1, y1, color)
+                except Exception as e:
+                    logging.error(f"Per-Class dynamic PPE engine process failed: {e}")
+
+            # ---------------- 💾 DISK LOGISTICS & ALERT ROUTING PIPELINE ----------------
             now = time.time()
-
             for det_type, detected in detect_flags.items():
+                # Skip secondary structural flags inside loop routing evaluator
+                if det_type in ["gpio_ppe_trigger", "wifi_ppe_trigger", "email_ppe_trigger"]:
+                    continue
+
                 if detected and now - last_save[det_type] >= ALERT_SAVE_COOLDOWN:
                     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                     readable_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -587,41 +673,57 @@ def ai_inference_engine():
                     cv2.imwrite(str(save_path), annotated)
 
                     last_save[det_type] = now
-
-                    score = next((s for t, s in alert_details if t == det_type), 0.0)
+                    
+                    # Exact accuracy extraction mapping
+                    score = next((s for t, s in alert_details if t == det_type), current_ppe_score)
                     accuracy = f"{score * 100:.1f}%"
                     image_url = f"/static/snapshots/{det_type}/{img_name}"
 
-                    save_alert_to_db(det_type, accuracy, image_url)
-                    add_audit_log("ALERT", f"{det_type.upper()} detected with {accuracy}")
+                    # Normalize payload name based on subcategory resolution
+                    db_type = specific_ppe_violation if det_type == "ppe" else det_type.upper()
+
+                    save_alert_to_db(db_type, accuracy, image_url)
+                    add_audit_log("ALERT", f"{db_type} tracking triggered validation with score {accuracy}")
 
                     system_state["last_alert"] = {
-                        "type": det_type.upper(),
+                        "type": db_type,
                         "accuracy": accuracy,
                         "time": readable_time,
                         "url": image_url
                     }
 
-                    if conf.get(f"email_alert_{det_type}"):
-                        subject = f"AI Safety Alert: {det_type.upper()}"
+                    # --- Dynamic Email Distribution Logic ---
+                    should_email = False
+                    if det_type == "ppe":
+                        should_email = detect_flags["email_ppe_trigger"] # Evaluated from active class mapping
+                    else:
+                        should_email = conf.get(f"email_alert_{det_type}") # Base systems backup checks
+
+                    if should_email:
+                        subject = f"🚨 AI Threat Detection Alert: {db_type}"
                         body = f"""
-                        <h3>Industrial Safety Alert</h3>
-                        <p><b>Detection:</b> {det_type.upper()}</p>
-                        <p><b>Confidence:</b> {accuracy}</p>
-                        <p><b>Time:</b> {readable_time}</p>
+                        <div style='font-family:sans-serif; background:#0f172a; color:#f8fafc; padding:20px; border-radius:10px;'>
+                            <h2 style='color:#ef4444; border-bottom:1px solid #1e293b; padding-bottom:10px;'>Industrial Surveillance Notification</h2>
+                            <p><b>Event Designation:</b> <span style='color:#f59e0b;'>{db_type}</span></p>
+                            <p><b>Confidence Rating:</b> {accuracy}</p>
+                            <p><b>Event Timestamp:</b> {readable_time}</p>
+                            <hr style='border:none; border-top:1px solid #1e293b;'/>
+                            <p style='font-size:12px; color:#64748b;'>Automated message generated by Core Matrix Analytics Backplane.</p>
+                        </div>
                         """
                         threading.Thread(
-                            target=send_email_worker,
-                            args=(subject, body, str(save_path), conf.get("email_recipients", "")),
+                            target=send_email_worker, 
+                            args=(subject, body, str(save_path), conf.get("email_recipients", "")), 
                             daemon=True
                         ).start()
 
-            # ---------------- Actuator decision ----------------
+            # ---------------- 🎛️ HARDWARE ACTUATOR EVALUATION MATRIX ----------------
             gpio_trigger = (
                 conf.get("alarm_manual_override")
                 or (detect_flags["fire"] and conf.get("gpio_alarm_fire"))
                 or (detect_flags["smoke"] and conf.get("gpio_alarm_smoke"))
                 or (detect_flags["human"] and conf.get("gpio_alarm_human"))
+                or detect_flags["gpio_ppe_trigger"]  # Class routing verified internally
             )
 
             wifi_trigger = (
@@ -629,20 +731,19 @@ def ai_inference_engine():
                 or (detect_flags["fire"] and conf.get("wifi_alarm_fire"))
                 or (detect_flags["smoke"] and conf.get("wifi_alarm_smoke"))
                 or (detect_flags["human"] and conf.get("wifi_alarm_human"))
+                or detect_flags["wifi_ppe_trigger"]  # Class routing verified internally
             )
 
             trigger_hardware_actuators(bool(gpio_trigger), bool(wifi_trigger))
 
+            # Render output buffer data
             with frame_lock:
                 output_frame = annotated.copy()
 
         except Exception as e:
-            system_state["last_error"] = f"AI engine error: {e}"
-            logging.error(system_state["last_error"])
+            logging.error(f"AI engine macro loop system execution fault: {e}")
 
         time.sleep(AI_LOOP_SLEEP)
-
-
 # ==========================================================
 # STREAM
 # ==========================================================
@@ -738,6 +839,11 @@ def logout():
 # ==========================================================
 # ROUTES
 # ==========================================================
+@app.route("/config")
+@login_required
+def config_page():
+    return render_template("config.html", config=get_config())
+
 @app.route("/")
 @login_required
 def index():
@@ -806,14 +912,14 @@ def commit_settings():
     data = request.json or {}
 
     allowed_keys = {
-        "fire_on", "smoke_on", "human_on",
-        "fire_thresh", "smoke_thresh", "human_thresh",
+        "fire_on", "smoke_on", "human_on", "fire_thresh", "smoke_thresh", "human_thresh",
         "gpio_alarm_fire", "gpio_alarm_smoke", "gpio_alarm_human",
         "wifi_alarm_fire", "wifi_alarm_smoke", "wifi_alarm_human",
         "email_alert_fire", "email_alert_smoke", "email_alert_human",
-        "alarm_manual_override",
-        "email_recipients"
+        "alarm_manual_override", "email_recipients",
+        "ppe_class_configs" # 👈 Sirf ye single key allow karni hai poore matrix ke liye
     }
+    
 
     conn = get_db()
     cur = conn.cursor()
@@ -822,6 +928,9 @@ def commit_settings():
         for key, value in data.items():
             if key not in allowed_keys:
                 continue
+
+
+
 
             if isinstance(value, bool):
                 db_value = "1" if value else "0"

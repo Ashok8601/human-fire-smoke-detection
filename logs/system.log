@@ -219,3 +219,1193 @@
 2026-07-06 12:21:26,101 | WARNING | Camera not opened. Reconnecting...
 2026-07-06 12:21:28,103 | WARNING | Camera not opened. Reconnecting...
 2026-07-06 12:21:30,104 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:12,696 | INFO | Fire/smoke model loaded
+2026-07-06 12:45:12,847 | INFO | Human model loaded
+2026-07-06 12:45:12,859 | WARNING | GPIO setup skipped/failed: [WinError 2] The system cannot find the file specified
+2026-07-06 12:45:12,863 | WARNING | Serial device not found
+2026-07-06 12:45:12,863 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:12,863 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 12:45:12,879 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 12:45:14,876 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:16,880 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:18,882 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:20,883 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:22,885 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:24,886 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:26,888 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:28,889 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:30,891 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:32,892 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:34,893 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:36,894 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:38,897 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:40,898 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:42,901 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:44,903 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:46,905 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:48,907 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:50,908 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:52,913 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:54,914 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:55,904 | WARNING | Task queue depth is 1
+2026-07-06 12:45:56,915 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:45:57,717 | WARNING | Task queue depth is 2
+2026-07-06 12:45:58,917 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:00,108 | WARNING | Task queue depth is 3
+2026-07-06 12:46:00,989 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:02,159 | WARNING | Task queue depth is 4
+2026-07-06 12:46:02,993 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:04,995 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:05,269 | WARNING | Task queue depth is 5
+2026-07-06 12:46:06,996 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:08,997 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:10,999 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:13,000 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:15,003 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:15,375 | WARNING | Task queue depth is 6
+2026-07-06 12:46:16,913 | WARNING | Task queue depth is 7
+2026-07-06 12:46:17,005 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:17,917 | WARNING | Task queue depth is 8
+2026-07-06 12:46:19,006 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:21,008 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:23,010 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:25,011 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:26,916 | WARNING | Task queue depth is 9
+2026-07-06 12:46:27,013 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:29,015 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:31,016 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:33,018 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:35,019 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:37,021 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:39,024 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:41,026 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:43,027 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:45,029 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:47,030 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:49,031 | WARNING | Task queue depth is 10
+2026-07-06 12:46:49,031 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:51,036 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:53,038 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:54,406 | WARNING | Task queue depth is 11
+2026-07-06 12:46:55,039 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:57,041 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:46:59,042 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:01,043 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:03,044 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:05,046 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:07,047 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:09,049 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:11,051 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:13,052 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:15,053 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:17,055 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:19,057 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:21,058 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:23,060 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:25,061 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:27,063 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:29,064 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:31,066 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:33,068 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:35,070 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:37,071 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:39,072 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:41,073 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:43,075 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:45,077 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:47,078 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:49,080 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:51,082 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:53,083 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:55,084 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:57,086 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:47:59,087 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:01,089 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:03,090 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:05,091 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:07,092 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:09,093 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:11,094 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:13,096 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:15,098 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:17,099 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:19,100 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:21,100 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:23,101 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:25,102 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:27,104 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:29,105 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:31,106 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:33,108 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:35,109 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:37,111 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:39,112 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:41,112 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:43,113 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:45,114 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:47,116 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:49,117 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:51,117 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:53,118 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:55,119 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:57,120 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:48:59,121 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:01,122 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:03,124 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:05,125 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:07,126 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:09,127 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:11,127 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:13,128 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:15,129 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:17,130 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:19,135 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:21,138 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:23,139 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:25,140 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:27,141 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:29,142 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:31,143 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:33,144 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:35,147 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:37,148 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:39,153 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:41,154 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:43,155 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:45,157 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:47,159 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:49,161 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:51,163 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:53,165 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:55,167 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:57,170 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:49:59,172 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:01,173 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:03,174 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:05,175 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:07,177 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:09,184 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:11,185 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:13,186 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:15,187 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:17,188 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:19,190 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:21,191 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:23,192 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:25,193 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:27,195 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:29,196 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:31,197 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:33,198 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:35,200 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:37,208 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:39,217 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:41,218 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:43,220 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:45,221 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:47,221 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:49,223 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:51,224 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:53,228 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:55,229 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:57,230 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:50:59,231 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:01,232 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:03,234 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:05,237 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:07,238 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:09,239 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:11,240 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:13,241 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:15,242 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:17,243 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:19,249 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:21,250 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:51:23,278 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:52:08,151 | INFO | Fire/smoke model loaded
+2026-07-06 12:52:08,309 | INFO | Human model loaded
+2026-07-06 12:52:08,309 | INFO | Windows environment: Skipping Pi GPIO Hardware mapping
+2026-07-06 12:52:08,309 | WARNING | Serial interface device not found
+2026-07-06 12:52:08,309 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:52:08,315 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:52:08,315 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 12:52:08,328 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 12:52:42,457 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:52:45,402 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:53:05,787 | WARNING | Task queue depth is 1
+2026-07-06 12:53:05,790 | WARNING | Task queue depth is 2
+2026-07-06 12:53:25,409 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:53:34,296 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:53:34,297 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:53:38,342 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:53:38,342 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:53:42,520 | WARNING | Task queue depth is 1
+2026-07-06 12:53:42,525 | WARNING | Task queue depth is 2
+2026-07-06 12:53:43,784 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:53:53,542 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:54:04,837 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:54:16,694 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:54:24,561 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:54:24,562 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:54:56,752 | INFO | Fire/smoke model loaded
+2026-07-06 12:54:56,874 | INFO | Human model loaded
+2026-07-06 12:54:56,876 | INFO | Windows environment: Skipping Pi GPIO Hardware mapping
+2026-07-06 12:54:56,877 | WARNING | Serial interface device not found
+2026-07-06 12:54:56,877 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:54:56,877 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:54:56,877 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 12:54:56,884 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 12:55:22,427 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:55:35,253 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:55:35,255 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:55:37,918 | INFO | Client disconnected while serving /video_feed
+2026-07-06 12:57:07,660 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:57:07,663 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:57:44,759 | INFO | Fire/smoke model loaded
+2026-07-06 12:57:44,858 | INFO | Human model loaded
+2026-07-06 12:57:44,858 | INFO | Windows environment: Skipping Pi GPIO Hardware mapping
+2026-07-06 12:57:44,858 | WARNING | Serial interface device not found
+2026-07-06 12:57:44,858 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 12:57:44,858 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 12:57:44,858 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 12:57:44,869 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 12:57:55,409 | WARNING | Task queue depth is 1
+2026-07-06 12:57:55,410 | WARNING | Task queue depth is 2
+2026-07-06 12:59:46,103 | INFO | Client disconnected while serving /video_feed
+2026-07-06 13:00:34,421 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 13:00:34,425 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 13:01:37,221 | WARNING | Task queue depth is 1
+2026-07-06 13:01:37,264 | WARNING | Task queue depth is 2
+2026-07-06 13:01:37,293 | WARNING | Task queue depth is 1
+2026-07-06 13:01:37,317 | WARNING | Task queue depth is 1
+2026-07-06 13:01:37,341 | WARNING | Task queue depth is 1
+2026-07-06 13:01:37,371 | WARNING | Task queue depth is 1
+2026-07-06 13:01:38,577 | INFO | Client disconnected while serving /video_feed
+2026-07-06 13:03:43,232 | WARNING | 1 thread(s) still running
+2026-07-06 14:31:50,203 | INFO | Fire/smoke model loaded
+2026-07-06 14:31:50,315 | INFO | Human model loaded
+2026-07-06 14:31:50,315 | INFO | Windows environment: Skipping Pi GPIO Hardware mapping
+2026-07-06 14:31:50,317 | WARNING | Serial interface device not found
+2026-07-06 14:31:50,317 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 14:31:50,317 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 14:31:50,317 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 14:31:50,324 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 14:31:57,560 | WARNING | Task queue depth is 1
+2026-07-06 14:31:57,563 | WARNING | Task queue depth is 2
+2026-07-06 14:31:57,869 | WARNING | Task queue depth is 1
+2026-07-06 14:31:57,872 | WARNING | Task queue depth is 2
+2026-07-06 14:31:57,905 | WARNING | Task queue depth is 1
+2026-07-06 14:32:10,657 | INFO | Client disconnected while serving /video_feed
+2026-07-06 14:32:11,762 | WARNING | Task queue depth is 1
+2026-07-06 14:32:11,780 | WARNING | Task queue depth is 2
+2026-07-06 14:32:11,820 | WARNING | Task queue depth is 1
+2026-07-06 14:32:11,851 | WARNING | Task queue depth is 1
+2026-07-06 14:32:11,862 | WARNING | Task queue depth is 1
+2026-07-06 14:32:11,865 | WARNING | Task queue depth is 2
+2026-07-06 14:32:27,644 | WARNING | 1 thread(s) still running
+2026-07-06 14:32:37,860 | INFO | Fire/smoke model loaded
+2026-07-06 14:32:38,021 | INFO | Human model loaded
+2026-07-06 14:32:38,021 | INFO | Windows environment: Skipping Pi GPIO Hardware mapping
+2026-07-06 14:32:38,021 | WARNING | Serial interface device not found
+2026-07-06 14:32:38,021 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 14:32:38,023 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 14:32:38,023 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 14:32:38,033 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 14:32:42,167 | WARNING | Task queue depth is 1
+2026-07-06 14:32:42,178 | WARNING | Task queue depth is 2
+2026-07-06 14:32:42,432 | WARNING | Task queue depth is 2
+2026-07-06 14:32:42,471 | WARNING | Task queue depth is 1
+2026-07-06 14:33:59,437 | INFO | Client disconnected while serving /video_feed
+2026-07-06 14:34:27,713 | WARNING | Task queue depth is 1
+2026-07-06 14:34:27,732 | WARNING | Task queue depth is 2
+2026-07-06 14:34:27,797 | WARNING | Task queue depth is 1
+2026-07-06 14:35:32,400 | INFO | Client disconnected while serving /video_feed
+2026-07-06 14:35:50,581 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 14:35:50,586 | INFO | Windows detected: Using default DirectShow camera backend
+2026-07-06 14:35:55,938 | WARNING | Task queue depth is 1
+2026-07-06 14:35:55,948 | WARNING | Task queue depth is 1
+2026-07-06 14:35:55,958 | WARNING | Task queue depth is 2
+2026-07-06 14:35:55,966 | WARNING | Task queue depth is 1
+2026-07-06 14:35:56,014 | WARNING | Task queue depth is 1
+2026-07-06 14:35:56,027 | WARNING | Task queue depth is 2
+2026-07-06 14:35:56,038 | WARNING | Task queue depth is 1
+2026-07-06 14:35:56,050 | WARNING | Task queue depth is 2
+2026-07-06 14:35:56,069 | WARNING | Task queue depth is 1
+2026-07-06 14:35:56,378 | INFO | Client disconnected while serving /video_feed
+2026-07-06 14:50:22,706 | INFO | Client disconnected while serving /video_feed
+2026-07-06 15:23:34,433 | WARNING | Task queue depth is 1
+2026-07-06 15:23:34,488 | WARNING | Task queue depth is 2
+2026-07-06 15:23:35,362 | INFO | Client disconnected while serving /video_feed
+2026-07-06 15:23:36,372 | WARNING | Task queue depth is 1
+2026-07-06 15:23:36,405 | WARNING | Task queue depth is 1
+2026-07-06 17:48:37,807 | INFO | Fire/smoke model loaded
+2026-07-06 17:48:37,907 | INFO | Human model loaded
+2026-07-06 17:48:38,617 | ERROR | PPE model failed: [Errno 2] No such file or directory: 'best1.pt'
+2026-07-06 17:48:38,617 | WARNING | GPIO setup skipped/failed: [WinError 2] The system cannot find the file specified
+2026-07-06 17:48:38,627 | WARNING | Serial device not found
+2026-07-06 17:48:38,628 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:38,633 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 17:48:38,633 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 17:48:40,641 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:42,647 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:44,648 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:46,650 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:47,270 | WARNING | Task queue depth is 1
+2026-07-06 17:48:47,275 | WARNING | Task queue depth is 2
+2026-07-06 17:48:47,275 | WARNING | Task queue depth is 3
+2026-07-06 17:48:47,508 | WARNING | Task queue depth is 1
+2026-07-06 17:48:47,509 | WARNING | Task queue depth is 2
+2026-07-06 17:48:47,513 | WARNING | Task queue depth is 1
+2026-07-06 17:48:47,531 | WARNING | Task queue depth is 1
+2026-07-06 17:48:47,541 | WARNING | Task queue depth is 1
+2026-07-06 17:48:48,651 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:50,652 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:52,653 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:54,655 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:56,656 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:48:58,658 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:00,659 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:02,661 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:04,661 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:06,663 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:08,665 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:10,666 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:12,668 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:14,669 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:16,671 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:18,672 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:20,673 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:22,675 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:24,677 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:26,679 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:28,679 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:30,681 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:30,881 | WARNING | Task queue depth is 1
+2026-07-06 17:49:30,898 | WARNING | Task queue depth is 1
+2026-07-06 17:49:30,911 | WARNING | Task queue depth is 1
+2026-07-06 17:49:30,912 | WARNING | Task queue depth is 2
+2026-07-06 17:49:30,915 | WARNING | Task queue depth is 2
+2026-07-06 17:49:30,918 | WARNING | Task queue depth is 2
+2026-07-06 17:49:30,928 | WARNING | Task queue depth is 2
+2026-07-06 17:49:30,928 | WARNING | Task queue depth is 3
+2026-07-06 17:49:30,932 | WARNING | Task queue depth is 3
+2026-07-06 17:49:30,944 | WARNING | Task queue depth is 2
+2026-07-06 17:49:30,948 | WARNING | Task queue depth is 3
+2026-07-06 17:49:30,959 | WARNING | Task queue depth is 3
+2026-07-06 17:49:30,963 | WARNING | Task queue depth is 4
+2026-07-06 17:49:32,683 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:34,685 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:36,688 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:38,689 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:40,691 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:41,285 | WARNING | Task queue depth is 1
+2026-07-06 17:49:42,692 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:43,133 | WARNING | Task queue depth is 2
+2026-07-06 17:49:44,024 | WARNING | Task queue depth is 3
+2026-07-06 17:49:44,841 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:46,841 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:48,847 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:50,849 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:52,850 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:54,852 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:56,853 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:49:58,854 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:00,282 | WARNING | Task queue depth is 4
+2026-07-06 17:50:00,813 | WARNING | Task queue depth is 5
+2026-07-06 17:50:00,858 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:02,503 | WARNING | Task queue depth is 6
+2026-07-06 17:50:02,861 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:04,862 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:06,863 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:08,864 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:10,865 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:12,867 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:14,871 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:16,884 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:18,897 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 17:50:20,931 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 18:08:07,130 | INFO | Fire/smoke model loaded
+2026-07-06 18:08:07,233 | INFO | Human model loaded
+2026-07-06 18:08:08,978 | ERROR | PPE model failed: [Errno 2] No such file or directory: 'best1.pt'
+2026-07-06 18:08:08,978 | INFO | GPIO skipped: non-Raspberry Pi system
+2026-07-06 18:08:08,996 | INFO | Serial skipped/not found
+2026-07-06 18:08:08,999 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 18:08:09,005 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 18:08:09,016 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 18:08:49,409 | INFO | Fire/smoke model loaded
+2026-07-06 18:08:49,461 | INFO | Human model loaded
+2026-07-06 18:08:49,660 | INFO | PPE Violation model loaded successfully!
+2026-07-06 18:08:49,660 | INFO | GPIO skipped: non-Raspberry Pi system
+2026-07-06 18:08:49,660 | INFO | Serial skipped/not found
+2026-07-06 18:08:49,660 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 18:08:49,660 | INFO | Server running on 0.0.0.0:8000
+2026-07-06 18:08:49,677 | INFO | Serving on http://0.0.0.0:8000
+2026-07-06 18:09:00,800 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:02,551 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:04,147 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:05,752 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:07,409 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:09,043 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:10,573 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:12,192 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:14,411 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:16,018 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:18,171 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:20,303 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:22,456 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:24,670 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:26,839 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:29,014 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:31,157 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:33,368 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:35,540 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:37,168 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:39,427 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:41,600 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:43,170 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:45,487 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:47,664 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:49,858 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:52,075 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:53,642 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:55,515 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:55,522 | WARNING | Task queue depth is 1
+2026-07-06 18:09:55,522 | WARNING | Task queue depth is 2
+2026-07-06 18:09:55,793 | WARNING | Task queue depth is 1
+2026-07-06 18:09:55,801 | WARNING | Task queue depth is 2
+2026-07-06 18:09:57,754 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:09:59,739 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:02,092 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:04,151 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:06,128 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:08,084 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:09,604 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:11,983 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:14,139 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:16,214 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:18,682 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:20,784 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:23,080 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:25,398 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:27,415 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:29,058 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:31,006 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:32,754 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:34,554 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:36,104 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:37,760 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:39,412 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:41,189 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:42,933 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:44,732 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:46,328 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:47,855 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:49,597 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:51,259 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:52,989 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:54,512 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:56,235 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:57,779 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:10:59,600 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:01,465 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:03,273 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:04,839 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:06,564 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:08,289 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:09,865 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:11,455 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:13,141 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:15,277 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:17,226 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:19,078 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:21,421 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:23,531 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:25,469 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:27,314 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:29,978 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:31,969 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:33,835 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:35,777 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:37,642 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:39,526 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:41,501 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:43,395 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:45,786 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:47,942 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:50,603 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:52,440 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:54,221 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:54,479 | INFO | Client disconnected while serving /video_feed
+2026-07-06 18:11:56,046 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:57,820 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:11:59,521 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:01,317 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:03,092 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:04,711 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:06,307 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:08,012 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:09,968 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:11,728 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:13,483 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:15,310 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:17,095 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:18,820 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:20,509 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:23,039 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:25,282 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:27,391 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:29,344 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:31,716 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:33,893 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:36,053 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:38,298 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:41,002 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:42,628 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:44,152 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:45,726 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:47,296 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:49,459 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:51,648 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:53,996 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:56,183 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:12:58,364 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:01,006 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:02,780 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:04,987 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:07,176 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:09,322 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:11,458 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:13,155 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:14,695 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:16,898 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:18,432 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:20,578 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:22,931 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:25,866 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:30,267 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:32,565 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:34,823 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:36,698 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:37,929 | INFO | Email alert sent
+2026-07-06 18:13:38,345 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:39,742 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:41,362 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:42,909 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:45,263 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:47,628 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:49,823 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:52,154 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:54,457 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:56,614 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:13:58,976 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:01,093 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:03,603 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:05,673 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:07,735 | WARNING | Camera frame read failed. Reopening camera.
+2026-07-06 18:14:08,609 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:09,265 | WARNING | Camera not opened. Reconnecting...
+2026-07-06 18:14:11,441 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:13,572 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:15,704 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:17,940 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:20,101 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:22,247 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:24,323 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:26,384 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:28,458 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:30,886 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:32,966 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:35,048 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:37,192 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:39,254 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:41,691 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:42,823 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:44,900 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:47,101 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:47,766 | INFO | Email alert sent
+2026-07-06 18:14:49,182 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:51,236 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:53,371 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:55,423 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:57,508 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:14:59,527 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:01,267 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:03,009 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:05,013 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:07,164 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:19,545 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:38,756 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:40,964 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:43,904 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:44,814 | INFO | Email alert sent
+2026-07-06 18:15:45,642 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:47,624 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:49,010 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:50,299 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:51,260 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:53,317 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:53,903 | INFO | Email alert sent
+2026-07-06 18:15:54,243 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:55,135 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:57,078 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:15:59,094 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:00,907 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:02,737 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:04,435 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:05,737 | INFO | Email alert sent
+2026-07-06 18:16:06,215 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:07,972 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:09,882 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:10,787 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:12,912 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:14,800 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:16,264 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:16,960 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:17,021 | INFO | Email alert sent
+2026-07-06 18:16:18,567 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:20,305 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:22,181 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:24,043 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:25,673 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:27,618 | INFO | Email alert sent
+2026-07-06 18:16:27,857 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:29,531 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:31,205 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:33,079 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:34,853 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:36,966 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:37,242 | INFO | Email alert sent
+2026-07-06 18:16:39,136 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:41,399 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:43,219 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:44,885 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:47,077 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:47,580 | INFO | Email alert sent
+2026-07-06 18:16:49,571 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:51,694 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:54,328 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:56,537 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:16:58,231 | INFO | Email alert sent
+2026-07-06 18:16:58,848 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:01,055 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:03,363 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:04,585 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:05,678 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:06,779 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:08,580 | INFO | Email alert sent
+2026-07-06 18:17:09,090 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:10,193 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:11,354 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:13,584 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:15,920 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:17,011 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:18,407 | INFO | Email alert sent
+2026-07-06 18:17:19,285 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:20,336 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:22,443 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:24,588 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:26,773 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:28,751 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:30,740 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:32,961 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:34,083 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:36,312 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:37,407 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:39,297 | INFO | Email alert sent
+2026-07-06 18:17:39,663 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:41,814 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:43,997 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:46,132 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:47,237 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:48,319 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:50,252 | INFO | Email alert sent
+2026-07-06 18:17:50,460 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:52,570 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:54,778 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:56,907 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:17:59,153 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:01,301 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:01,306 | INFO | Email alert sent
+2026-07-06 18:18:03,467 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:05,646 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:07,893 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:10,194 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:11,757 | INFO | Email alert sent
+2026-07-06 18:18:12,338 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:14,503 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:15,598 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:17,800 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:20,001 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:21,085 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:22,883 | INFO | Email alert sent
+2026-07-06 18:18:23,270 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:24,431 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:25,475 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:26,553 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:28,622 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:29,791 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:30,854 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 18:18:33,107 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 21:18:38,033 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-06 21:18:46,402 | ERROR | Email alert failed: Connection unexpectedly closed: The read operation timed out
+2026-07-06 21:18:47,782 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:19,084 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:35,871 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:44,387 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:47,017 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:49,827 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:52,531 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:54,865 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:57,380 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:56:59,384 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:01,573 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:04,504 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:06,637 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:09,367 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:10,815 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:13,054 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:15,547 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:16,419 | INFO | Email alert sent
+2026-07-07 08:57:17,588 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:19,692 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:21,666 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:22,892 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:24,751 | INFO | Email alert sent
+2026-07-07 08:57:25,314 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:27,369 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:28,223 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:29,072 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:29,971 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:30,830 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:32,610 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:34,398 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:35,951 | INFO | Email alert sent
+2026-07-07 08:57:36,059 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:37,739 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:39,354 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:40,922 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:43,329 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:45,593 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:47,760 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:49,969 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:51,060 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:53,292 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:55,406 | INFO | Email alert sent
+2026-07-07 08:57:55,486 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:57,701 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:57:58,713 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:00,810 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:02,495 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:35,615 | INFO | Fire/smoke model loaded
+2026-07-07 08:58:35,710 | INFO | Human model loaded
+2026-07-07 08:58:35,884 | INFO | PPE Violation model loaded successfully!
+2026-07-07 08:58:35,884 | INFO | GPIO skipped: non-Raspberry Pi system
+2026-07-07 08:58:35,884 | INFO | Serial skipped/not found
+2026-07-07 08:58:35,884 | WARNING | Camera not opened. Reconnecting...
+2026-07-07 08:58:35,895 | INFO | Server running on 0.0.0.0:8000
+2026-07-07 08:58:35,898 | INFO | Serving on http://0.0.0.0:8000
+2026-07-07 08:58:45,415 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:47,096 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:49,543 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:52,451 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:56,104 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:57,859 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:58:59,603 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:02,667 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:04,228 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:06,693 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:08,738 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:11,236 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:13,965 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:14,909 | INFO | Email alert sent
+2026-07-07 08:59:15,152 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:16,340 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:17,866 | WARNING | Task queue depth is 1
+2026-07-07 08:59:17,873 | WARNING | Task queue depth is 2
+2026-07-07 08:59:18,323 | WARNING | Task queue depth is 1
+2026-07-07 08:59:19,737 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:21,521 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:24,262 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:25,497 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:25,722 | INFO | Email alert sent
+2026-07-07 08:59:26,750 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:29,283 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:32,427 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:35,045 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:36,677 | INFO | Email alert sent
+2026-07-07 08:59:37,631 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:40,257 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:43,062 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:44,594 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:47,273 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:49,849 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:52,323 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:55,534 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:57,231 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 08:59:59,602 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:02,643 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:06,847 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:07,912 | INFO | Email alert sent
+2026-07-07 09:00:09,882 | WARNING | 1 thread(s) still running
+2026-07-07 09:00:10,081 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:10,089 | ERROR | AI engine macro loop system execution fault: can't create new thread at interpreter shutdown
+2026-07-07 09:00:32,495 | INFO | Fire/smoke model loaded
+2026-07-07 09:00:32,608 | INFO | Human model loaded
+2026-07-07 09:00:32,741 | INFO | PPE Violation model loaded successfully!
+2026-07-07 09:00:32,741 | INFO | GPIO skipped: non-Raspberry Pi system
+2026-07-07 09:00:32,741 | INFO | Serial skipped/not found
+2026-07-07 09:00:32,741 | WARNING | Camera not opened. Reconnecting...
+2026-07-07 09:00:32,749 | INFO | Server running on 0.0.0.0:8000
+2026-07-07 09:00:32,751 | INFO | Serving on http://0.0.0.0:8000
+2026-07-07 09:00:38,966 | WARNING | Task queue depth is 1
+2026-07-07 09:00:38,985 | WARNING | Task queue depth is 1
+2026-07-07 09:00:38,993 | WARNING | Task queue depth is 1
+2026-07-07 09:00:42,678 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:44,038 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:45,601 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:48,364 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:49,967 | INFO | Email alert sent
+2026-07-07 09:00:51,060 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:53,552 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:55,649 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:56,297 | INFO | Client disconnected while serving /video_feed
+2026-07-07 09:00:57,831 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:00:59,882 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:02,090 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:04,228 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:06,253 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:08,190 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:10,401 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:12,523 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:14,869 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:16,875 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:18,578 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:20,290 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:21,938 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:23,523 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:25,121 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:26,769 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:28,439 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:30,070 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:32,145 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:34,074 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:35,943 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:37,180 | WARNING | Task queue depth is 1
+2026-07-07 09:01:37,187 | WARNING | Task queue depth is 2
+2026-07-07 09:01:37,199 | WARNING | Task queue depth is 1
+2026-07-07 09:01:37,240 | WARNING | Task queue depth is 1
+2026-07-07 09:01:38,459 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:40,254 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:41,544 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:44,098 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:46,399 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:48,865 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:50,987 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:53,235 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:55,641 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:01:58,296 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:00,994 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:03,703 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:07,066 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:08,574 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:11,392 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:13,097 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:14,525 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:16,157 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:18,277 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:20,508 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:23,186 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:25,591 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:28,394 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:30,834 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:33,413 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:36,065 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:38,745 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:41,350 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:42,972 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:44,593 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:47,475 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:48,809 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:50,536 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:53,521 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:55,977 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:58,394 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:02:59,774 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:02,675 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:04,478 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:05,709 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:08,599 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:10,104 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:12,855 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:14,540 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:17,534 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:19,056 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:21,238 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:21,944 | INFO | Client disconnected while serving /video_feed
+2026-07-07 09:03:23,367 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:25,205 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:27,020 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:28,889 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:30,825 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:32,687 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:35,135 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:36,945 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:38,791 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:40,824 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:42,787 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:44,705 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:46,672 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:48,505 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:50,372 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:52,345 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:54,245 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:56,357 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:03:58,423 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:00,294 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:02,244 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:04,186 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:06,037 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:07,922 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:09,782 | WARNING | Task queue depth is 1
+2026-07-07 09:04:09,802 | WARNING | Task queue depth is 1
+2026-07-07 09:04:09,821 | WARNING | Task queue depth is 1
+2026-07-07 09:04:10,219 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:12,422 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:14,847 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:17,085 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:19,352 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:21,622 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:23,861 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:26,224 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:28,475 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:30,800 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:33,126 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:35,571 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:37,803 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:40,044 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:42,240 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:44,368 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:46,454 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:48,646 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:50,830 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:53,101 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:55,418 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:57,715 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:04:59,969 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:02,215 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:04,868 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:07,332 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:09,314 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:10,253 | INFO | Client disconnected while serving /video_feed
+2026-07-07 09:05:11,253 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:13,133 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:15,083 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:16,956 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:18,808 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:20,775 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:22,667 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:24,691 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:26,596 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:28,485 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:30,511 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:32,624 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:34,564 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:36,475 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:38,418 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:40,372 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:42,274 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:44,268 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:46,255 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:48,189 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:50,102 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:51,979 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:53,921 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:55,881 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:57,796 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:05:59,815 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:01,631 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:03,602 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:05,721 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:07,576 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:09,654 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:11,479 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:13,300 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:15,346 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:17,185 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:19,041 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:20,959 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:22,966 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:24,998 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:27,017 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:28,870 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:30,729 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:32,645 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:34,628 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:36,496 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:38,373 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:40,316 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:42,145 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:43,945 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:45,853 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:47,676 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:49,596 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:51,430 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:53,259 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:55,207 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:57,137 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:06:58,970 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:00,898 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:04,171 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:07,188 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:11,820 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:13,492 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:15,052 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:17,565 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:19,665 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:21,760 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:23,923 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:26,119 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:28,150 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:30,219 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:32,011 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:34,728 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:37,116 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:40,237 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:42,971 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:44,582 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:47,002 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:49,341 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:51,476 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:53,320 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:55,227 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:57,345 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:07:59,682 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:01,662 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:03,578 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:05,765 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:07,606 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:09,722 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:11,578 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:13,685 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:15,574 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:17,464 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:19,685 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:21,816 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:23,886 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:25,758 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:27,700 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:29,966 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:31,869 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:33,704 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:36,038 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:37,926 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:40,466 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:42,766 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:44,725 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:46,707 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:48,531 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:50,514 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:52,646 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:54,459 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:56,413 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:08:58,413 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:00,339 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:02,160 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:04,139 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:06,032 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:07,898 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:09,749 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:11,572 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:13,733 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:15,625 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:17,636 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:19,585 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:21,517 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:23,307 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:25,253 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:27,241 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:29,083 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:31,150 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:32,988 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:35,028 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:37,020 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:38,976 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:40,889 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:42,910 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:44,797 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:46,779 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:48,686 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:50,706 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:52,686 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:54,890 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:56,695 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:09:58,554 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:00,504 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:02,414 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:04,440 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:06,428 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:08,347 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:10,223 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:12,093 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:14,148 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:16,154 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:18,086 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:20,106 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:22,103 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:23,985 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:26,021 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:28,025 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:29,847 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:31,676 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:33,465 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:35,294 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:37,122 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:38,913 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:40,742 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:43,061 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:44,937 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:46,747 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:48,579 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:50,443 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:52,284 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:54,223 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:56,245 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:10:58,087 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:00,089 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:01,943 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:03,784 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:05,743 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:07,528 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:09,345 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:11,195 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:13,048 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:14,986 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:16,828 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:18,681 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:20,611 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:22,466 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:24,309 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:26,194 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:28,069 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:29,990 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:31,884 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:33,733 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:35,637 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:37,520 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:39,398 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:41,392 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:43,338 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:45,362 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:48,118 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:50,609 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:52,162 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:54,383 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:56,638 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:11:58,646 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:00,575 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:02,415 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:04,391 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:06,290 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:07,994 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:10,508 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified
+2026-07-07 09:12:12,367 | WARNING | GPIO trigger failed: [WinError 2] The system cannot find the file specified

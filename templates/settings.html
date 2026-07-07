@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enterprise Security Core Configurations</title>
     <style>
         :root {
@@ -9,7 +10,7 @@
             --primary: #2563eb; --accent: #f59e0b; --text: #f8fafc; --muted: #64748b;
         }
         body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg-base); color: var(--text); padding: 30px; display: flex; justify-content: center; }
-        .settings-frame { width: 100%; max-width: 800px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        .settings-frame { width: 100%; max-width: 950px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); padding: 32px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
         .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
         h2 { margin: 0; font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
         .back-nav { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; }
@@ -29,14 +30,13 @@
         input:checked + .slider-cap { background: var(--primary); }
         input:checked + .slider-cap:before { transform: translateX(20px); }
         
-        .matrix-layout { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 10px; text-align: center; font-size: 13px; }
+        .matrix-layout { display: grid; grid-template-columns: 2.5fr 1.5fr 1fr 1fr 1fr 1fr; gap: 10px; text-align: center; font-size: 13px; }
         .m-header { font-weight: 700; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
-        .m-cell { padding: 8px 0; display: flex; align-items: center; justify-content: center; }
+        .m-cell { padding: 6px 0; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.01); }
         
         .txt-field { width: 100%; background: #020617; border: 1px solid var(--border); color: #fff; padding: 12px; border-radius: 6px; font-size: 14px; outline: none; margin-top: 6px; }
-        .txt-field:focus { border-color: var(--primary); }
         
-        .submit-btn { background: #10b981; color: white; border: none; width: 100%; padding: 14px; border-radius: 8px; font-weight: 800; font-size: 15px; cursor: pointer; box-shadow: 0 4px 12px rgba(16,185,129,0.2); transition: background 0.2s; }
+        .submit-btn { background: #10b981; color: white; border: none; width: 100%; padding: 14px; border-radius: 8px; font-weight: 800; font-size: 15px; cursor: pointer; margin-top: 15px; }
         .submit-btn:hover { background: #059669; }
     </style>
 </head>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="block-unit">
-        <h3 class="block-title">1. Computer Vision Neural Network Models</h3>
+        <h3 class="block-title">1. Base Neural Network Subsystems</h3>
         <div class="row-grid">
             <span>YOLO Custom Fire Analysis Model</span>
             <div class="slider-flex">
@@ -77,53 +77,104 @@
     </div>
 
     <div class="block-unit">
-        <h3 class="block-title">2. Notification Pipeline Output Matrix</h3>
-        <div class="matrix-layout">
-            <div class="m-header" style="text-align:left;">Analytic Target</div>
+        <h3 class="block-title">2. Base Notification Output Lines</h3>
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 10px; font-size:13px; text-align:center;">
+            <div class="m-header" style="text-align:left;">Target Event</div>
             <div class="m-header">Linux GPIO 18</div>
-            <div class="m-header">WiFi COM3 Out</div>
+            <div class="m-header">WiFi COM3</div>
             <div class="m-header">Email Alerts</div>
 
-            <div class="m-cell" style="justify-content:flex-start; font-weight:600;">Fire Events</div>
+            <div class="m-cell" style="justify-content:flex-start;">Fire Events</div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="gpio_alarm_fire" {% if config.gpio_alarm_fire %}checked{% endif %}><span class="slider-cap"></span></label></div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="wifi_alarm_fire" {% if config.wifi_alarm_fire %}checked{% endif %}><span class="slider-cap"></span></label></div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="email_alert_fire" {% if config.email_alert_fire %}checked{% endif %}><span class="slider-cap"></span></label></div>
 
-            <div class="m-cell" style="justify-content:flex-start; font-weight:600;">Smoke Inversions</div>
+            <div class="m-cell" style="justify-content:flex-start;">Smoke Inversions</div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="gpio_alarm_smoke" {% if config.gpio_alarm_smoke %}checked{% endif %}><span class="slider-cap"></span></label></div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="wifi_alarm_smoke" {% if config.wifi_alarm_smoke %}checked{% endif %}><span class="slider-cap"></span></label></div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="email_alert_smoke" {% if config.email_alert_smoke %}checked{% endif %}><span class="slider-cap"></span></label></div>
 
-            <div class="m-cell" style="justify-content:flex-start; font-weight:600;">Human Intrusions</div>
+            <div class="m-cell" style="justify-content:flex-start;">Human Intrusions</div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="gpio_alarm_human" {% if config.gpio_alarm_human %}checked{% endif %}><span class="slider-cap"></span></label></div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="wifi_alarm_human" {% if config.wifi_alarm_human %}checked{% endif %}><span class="slider-cap"></span></label></div>
             <div class="m-cell"><label class="switch"><input type="checkbox" id="email_alert_human" {% if config.email_alert_human %}checked{% endif %}><span class="slider-cap"></span></label></div>
         </div>
     </div>
 
+    <div class="block-unit" style="max-height: 450px; overflow-y: auto;">
+        <h3 class="block-title" style="color: #60a5fa;">3. Granular PPE Class Matrix Controller (19 Classes)</h3>
+        <div class="matrix-layout" id="ppeDynamicContainer">
+            <div class="m-header" style="text-align:left;">PPE Dataset Class</div>
+            <div class="m-header">Model Threshold</div>
+            <div class="m-header">ON/OFF</div>
+            <div class="m-header">GPIO 18</div>
+            <div class="m-header">WiFi Out</div>
+            <div class="m-header">Email</div>
+            </div>
+    </div>
+
     <div class="block-unit">
-        <h3 class="block-title">3. Secure SMTP Distribution Configuration</h3>
-        <label style="font-size:13px; color:var(--muted)">Target Email Channels Group (Separated by commas):</label>
+        <h3 class="block-title">4. Secure SMTP Distribution Configuration</h3>
         <input type="text" id="email_recipients" class="txt-field" value="{{ config.email_recipients }}">
     </div>
 
     <div class="block-unit" style="border:1px dashed #ef4444; background: rgba(239,68,68,0.02)">
-        <h3 class="block-title" style="color:#ef4444">4. Strategic Hardware Override System Test</h3>
+        <h3 class="block-title" style="color:#ef4444">5. Strategic Hardware Override</h3>
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <span>Force System Alarm Lines Hot (HIGH State)</span>
             <label class="switch"><input type="checkbox" id="alarm_manual_override" {% if config.alarm_manual_override %}checked{% endif %}><span class="slider-cap"></span></label>
         </div>
     </div>
 
-    <button class="submit-btn" onclick="commitChangesToSqlDatabase()">💾 SAVE SYSTEM CHANGES</button>
+    <button class="submit-btn" onclick="commitChangesToSqlDatabase()">💾 SAVE SYSTEM MATRIX CONFIGS</button>
 </div>
 
 <script>
+    // Safe parse mechanism injection for JSON payload mapping
+    const serverClassConfigs = JSON.parse(`{{ config.ppe_class_configs | safe }}`);
+
+    // Dynamic UI table generation matrix loop
+    const container = document.getElementById('ppeDynamicContainer');
+    Object.keys(serverClassConfigs).forEach(className => {
+        const c = serverClassConfigs[className];
+        const percentVal = Math.round(c.thresh * 100);
+        
+        // Dynamic string generation inject rows
+        const htmlRow = `
+            <div class="m-cell" style="justify-content:flex-start; font-weight: 600; color:${className.includes('No-') || className.includes('Fall')?'#f87171':'#34d399'}">${className}</div>
+            <div class="m-cell">
+                <div class="slider-flex" style="width:100%;">
+                    <input type="range" class="ppe-slider" data-class="${className}" min="0.1" max="0.95" step="0.05" value="${c.thresh}" oninput="document.getElementById('lbl_${className}').innerText=Math.round(this.value*100)+'%'">
+                    <span class="lbl-val" id="lbl_${className}" style="width:40px;">${percentVal}%</span>
+                </div>
+            </div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" class="ppe-on" data-class="${className}" ${c.on?'checked':''}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" class="ppe-gpio" data-class="${className}" ${c.gpio?'checked':''}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" class="ppe-wifi" data-class="${className}" ${c.wifi?'checked':''}><span class="slider-cap"></span></label></div>
+            <div class="m-cell"><label class="switch"><input type="checkbox" class="ppe-email" data-class="${className}" ${c.email?'checked':''}><span class="slider-cap"></span></label></div>
+        `;
+        container.insertAdjacentHTML('beforeend', htmlRow);
+    });
+
     function syncLabel(target, value) {
         document.getElementById('val_' + target).innerText = Math.round(value * 100) + '%';
     }
 
     function commitChangesToSqlDatabase() {
+        // Build map schema loop dynamically
+        const updatedPPEConfigs = {};
+        
+        document.querySelectorAll('.ppe-slider').forEach(slider => {
+            const className = slider.getAttribute('data-class');
+            updatedPPEConfigs[className] = {
+                thresh: parseFloat(slider.value),
+                on: document.querySelector(`.ppe-on[data-class="${className}"]`).checked,
+                gpio: document.querySelector(`.ppe-gpio[data-class="${className}"]`).checked,
+                wifi: document.querySelector(`.ppe-wifi[data-class="${className}"]`).checked,
+                email: document.querySelector(`.ppe-email[data-class="${className}"]`).checked
+            };
+        });
+
         const matrixPayload = {
             fire_on: document.getElementById('fire_on').checked,
             smoke_on: document.getElementById('smoke_on').checked,
@@ -141,7 +192,10 @@
             email_alert_smoke: document.getElementById('email_alert_smoke').checked,
             email_alert_human: document.getElementById('email_alert_human').checked,
             alarm_manual_override: document.getElementById('alarm_manual_override').checked,
-            email_recipients: document.getElementById('email_recipients').value
+            email_recipients: document.getElementById('email_recipients').value,
+            
+            // 👈 Pure 19 classes ka integrated dynamic payload compiled object string 
+            ppe_class_configs: JSON.stringify(updatedPPEConfigs)
         };
 
         fetch('/commit_settings', {
@@ -152,11 +206,12 @@
         .then(res => res.json())
         .then(data => {
             if(data.status === 'success') {
-                alert("🔒 Enterprise Configurations committed permanently to SQLite3 database database!");
+                alert("🔒 Full-Stack Matrix Configurations saved to Database!");
             } else {
                 alert("❌ Fail: " + data.status);
             }
-        });
+        })
+        .catch(err => alert("❌ Communication error with matrix server: " + err));
     }
 </script>
 </body>
